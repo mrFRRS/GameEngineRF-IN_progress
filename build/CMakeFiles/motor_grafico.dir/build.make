@@ -97,24 +97,10 @@ CMakeFiles/motor_grafico.dir/src/core/engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motor_grafico.dir/src/core/engine.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrsws/dev/c/projects/motor_grafico/src/core/engine.cpp -o CMakeFiles/motor_grafico.dir/src/core/engine.cpp.s
 
-CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o: CMakeFiles/motor_grafico.dir/flags.make
-CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o: /home/mrsws/dev/c/projects/motor_grafico/src/widgets/hello_world_button.cpp
-CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o: CMakeFiles/motor_grafico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o -MF CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o.d -o CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widgets/hello_world_button.cpp
-
-CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mrsws/dev/c/projects/motor_grafico/src/widgets/hello_world_button.cpp > CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.i
-
-CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mrsws/dev/c/projects/motor_grafico/src/widgets/hello_world_button.cpp -o CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.s
-
 CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o: CMakeFiles/motor_grafico.dir/flags.make
 CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o: /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui.cpp
 CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o: CMakeFiles/motor_grafico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o -MF CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o.d -o CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui.cpp
 
 CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.s: cmake_force
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/motor_grafico.dir/flags.make
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o: /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_opengl3.cpp
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/motor_grafico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o -MF CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_opengl3.cpp
 
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.s: cmake_force
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o: CMakeFiles/motor_grafico.dir/flags.make
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o: /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_sdl2.cpp
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o: CMakeFiles/motor_grafico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o -MF CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o.d -o CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_sdl2.cpp
 
 CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.i: cmake_force
@@ -156,7 +142,7 @@ CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.s: cmake_force
 CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/motor_grafico.dir/flags.make
 CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o: /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_widgets.cpp
 CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/motor_grafico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o -MF CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_widgets.cpp
 
 CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.i: cmake_force
@@ -170,7 +156,7 @@ CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.s: cmake_force
 CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o: CMakeFiles/motor_grafico.dir/flags.make
 CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o: /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_draw.cpp
 CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o: CMakeFiles/motor_grafico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o -MF CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o.d -o CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_draw.cpp
 
 CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o: CMakeFiles/motor_grafico.dir/flags.make
 CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o: /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_tables.cpp
 CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o: CMakeFiles/motor_grafico.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o -MF CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o.d -o CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_tables.cpp
 
 CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.i: cmake_force
@@ -199,7 +185,6 @@ CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.s: cmake_force
 motor_grafico_OBJECTS = \
 "CMakeFiles/motor_grafico.dir/src/main.cpp.o" \
 "CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o" \
-"CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o" \
 "CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o" \
 "CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o" \
 "CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o" \
@@ -212,7 +197,6 @@ motor_grafico_EXTERNAL_OBJECTS =
 
 motor_grafico: CMakeFiles/motor_grafico.dir/src/main.cpp.o
 motor_grafico: CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o
-motor_grafico: CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o
 motor_grafico: CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o
 motor_grafico: CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o
 motor_grafico: CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o
@@ -225,7 +209,7 @@ motor_grafico: /usr/lib/libSDL2-2.0.so.0.3000.0
 motor_grafico: /usr/lib/libGL.so
 motor_grafico: /usr/lib/libGLU.so
 motor_grafico: CMakeFiles/motor_grafico.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable motor_grafico"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mrsws/dev/c/projects/motor_grafico/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable motor_grafico"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motor_grafico.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

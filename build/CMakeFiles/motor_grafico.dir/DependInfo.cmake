@@ -16,7 +16,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_widgets.cpp" "CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o.d"
   "/home/mrsws/dev/c/projects/motor_grafico/src/core/engine.cpp" "CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o.d"
   "/home/mrsws/dev/c/projects/motor_grafico/src/main.cpp" "CMakeFiles/motor_grafico.dir/src/main.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/main.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/widgets/hello_world_button.cpp" "CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

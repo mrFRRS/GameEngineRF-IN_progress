@@ -20,13 +20,13 @@ add_executable(
     motor_grafico 
     src/main.cpp
     src/core/engine.cpp
-    src/widgets/hello_world_button.cpp
     ${IMGUI_SOURCES}
 )
 
 # Incluye los directorios necesarios
 target_include_directories(motor_grafico PRIVATE 
     ${CMAKE_SOURCE_DIR}/imgui  
+    ${CMAKE_SOURCE_DIR}/widget
 )
 
 find_package(OpenGL REQUIRED)

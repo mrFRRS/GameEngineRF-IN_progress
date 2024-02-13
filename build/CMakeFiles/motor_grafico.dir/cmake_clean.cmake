@@ -15,8 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o.d"
   "CMakeFiles/motor_grafico.dir/src/main.cpp.o"
   "CMakeFiles/motor_grafico.dir/src/main.cpp.o.d"
-  "CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o"
-  "CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o.d"
   "motor_grafico"
   "motor_grafico.pdb"
 )

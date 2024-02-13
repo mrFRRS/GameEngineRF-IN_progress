@@ -321,30 +321,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/widgets/hello_world_button.o: src/widgets/hello_world_button.cpp.o
-.PHONY : src/widgets/hello_world_button.o
-
-# target to build an object file
-src/widgets/hello_world_button.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.o
-.PHONY : src/widgets/hello_world_button.cpp.o
-
-src/widgets/hello_world_button.i: src/widgets/hello_world_button.cpp.i
-.PHONY : src/widgets/hello_world_button.i
-
-# target to preprocess a source file
-src/widgets/hello_world_button.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.i
-.PHONY : src/widgets/hello_world_button.cpp.i
-
-src/widgets/hello_world_button.s: src/widgets/hello_world_button.cpp.s
-.PHONY : src/widgets/hello_world_button.s
-
-# target to generate assembly for a file
-src/widgets/hello_world_button.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widgets/hello_world_button.cpp.s
-.PHONY : src/widgets/hello_world_button.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -378,9 +354,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/widgets/hello_world_button.o"
-	@echo "... src/widgets/hello_world_button.i"
-	@echo "... src/widgets/hello_world_button.s"
 .PHONY : help
 
 
