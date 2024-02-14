@@ -204,9 +204,12 @@ CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h /usr/include/SDL2/SDL_opengl.h \
- /usr/include/SDL2/SDL_opengl_glext.h /usr/include/c++/13.2.1/iostream \
- /usr/include/c++/13.2.1/ostream /usr/include/c++/13.2.1/ios \
- /usr/include/c++/13.2.1/iosfwd /usr/include/c++/13.2.1/bits/stringfwd.h \
+ /usr/include/SDL2/SDL_opengl_glext.h \
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget.h \
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget..h \
+ /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
+ /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/iosfwd \
+ /usr/include/c++/13.2.1/bits/stringfwd.h \
  /usr/include/c++/13.2.1/bits/memoryfwd.h \
  /usr/include/c++/13.2.1/bits/postypes.h /usr/include/c++/13.2.1/cwchar \
  /usr/include/c++/13.2.1/exception \

@@ -1275,6 +1275,8 @@ CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o: src/core/engine.cpp \
   imgui/imgui_impl_opengl3.h \
   imgui/imgui_impl_sdl2.h \
   src/core/engine.h \
+  src/widget/elements_list_widget..h \
+  src/widget/header_engine_widget.h \
   /usr/include/GLES2/gl2.h \
   /usr/include/GLES2/gl2ext.h \
   /usr/include/GLES2/gl2platform.h \
@@ -2020,6 +2022,52 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xsavesintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xtestintrin.h
 
+CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o: src/widget/elements_list_widget.cpp \
+  imgui/imconfig.h \
+  imgui/imgui.h \
+  src/widget/elements_list_widget..h \
+  /usr/include/assert.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
+
+CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o: src/widget/header_engine_widget.cpp \
+  imgui/imconfig.h \
+  imgui/imgui.h \
+  src/widget/header_engine_widget.h \
+  /usr/include/assert.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
+
 
 /usr/include/sys/single_threaded.h:
 
@@ -2060,6 +2108,8 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
 /usr/include/c++/13.2.1/ext/alloc_traits.h:
 
 /usr/include/c++/13.2.1/exception:
+
+src/widget/header_engine_widget.cpp:
 
 /usr/include/c++/13.2.1/cstdio:
 
@@ -2145,6 +2195,8 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
 
 /usr/include/GLES2/gl2ext.h:
 
+src/widget/elements_list_widget..h:
+
 src/core/engine.h:
 
 src/core/engine.cpp:
@@ -2164,6 +2216,8 @@ imgui/imgui_widgets.cpp:
 /usr/include/X11/Xlib.h:
 
 /usr/include/c++/13.2.1/bits/allocator.h:
+
+src/widget/header_engine_widget.h:
 
 /usr/include/X11/Xfuncproto.h:
 
@@ -2394,6 +2448,8 @@ src/main.cpp:
 /usr/include/c++/13.2.1/bits/locale_facets.tcc:
 
 /usr/include/gnu/stubs.h:
+
+src/widget/elements_list_widget.cpp:
 
 /usr/include/c++/13.2.1/tr1/legendre_function.tcc:
 

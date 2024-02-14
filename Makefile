@@ -321,6 +321,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/widget/elements_list_widget.o: src/widget/elements_list_widget.cpp.o
+.PHONY : src/widget/elements_list_widget.o
+
+# target to build an object file
+src/widget/elements_list_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o
+.PHONY : src/widget/elements_list_widget.cpp.o
+
+src/widget/elements_list_widget.i: src/widget/elements_list_widget.cpp.i
+.PHONY : src/widget/elements_list_widget.i
+
+# target to preprocess a source file
+src/widget/elements_list_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.i
+.PHONY : src/widget/elements_list_widget.cpp.i
+
+src/widget/elements_list_widget.s: src/widget/elements_list_widget.cpp.s
+.PHONY : src/widget/elements_list_widget.s
+
+# target to generate assembly for a file
+src/widget/elements_list_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.s
+.PHONY : src/widget/elements_list_widget.cpp.s
+
+src/widget/header_engine_widget.o: src/widget/header_engine_widget.cpp.o
+.PHONY : src/widget/header_engine_widget.o
+
+# target to build an object file
+src/widget/header_engine_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o
+.PHONY : src/widget/header_engine_widget.cpp.o
+
+src/widget/header_engine_widget.i: src/widget/header_engine_widget.cpp.i
+.PHONY : src/widget/header_engine_widget.i
+
+# target to preprocess a source file
+src/widget/header_engine_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.i
+.PHONY : src/widget/header_engine_widget.cpp.i
+
+src/widget/header_engine_widget.s: src/widget/header_engine_widget.cpp.s
+.PHONY : src/widget/header_engine_widget.s
+
+# target to generate assembly for a file
+src/widget/header_engine_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.s
+.PHONY : src/widget/header_engine_widget.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -354,6 +402,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/widget/elements_list_widget.o"
+	@echo "... src/widget/elements_list_widget.i"
+	@echo "... src/widget/elements_list_widget.s"
+	@echo "... src/widget/header_engine_widget.o"
+	@echo "... src/widget/header_engine_widget.i"
+	@echo "... src/widget/header_engine_widget.s"
 .PHONY : help
 
 

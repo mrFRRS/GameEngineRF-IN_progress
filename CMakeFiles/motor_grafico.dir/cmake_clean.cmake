@@ -15,6 +15,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o.d"
   "CMakeFiles/motor_grafico.dir/src/main.cpp.o"
   "CMakeFiles/motor_grafico.dir/src/main.cpp.o.d"
+  "CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o"
+  "CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o.d"
+  "CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o"
+  "CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o.d"
   "motor_grafico"
   "motor_grafico.pdb"
 )

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mrsws/dev/c/projects/motor_grafico/imgui -isystem /usr/include/SDL2
+CXX_INCLUDES = -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2
 
 CXX_FLAGS = 
 

@@ -1282,6 +1282,8 @@ CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o
  /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_opengl3.h
  /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_sdl2.h
  /home/mrsws/dev/c/projects/motor_grafico/src/core/engine.h
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget..h
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget.h
  /usr/include/GLES2/gl2.h
  /usr/include/GLES2/gl2ext.h
  /usr/include/GLES2/gl2platform.h
@@ -2027,4 +2029,52 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xsaveoptintrin.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xsavesintrin.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xtestintrin.h
+
+CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget.cpp
+ /home/mrsws/dev/c/projects/motor_grafico/imgui/imconfig.h
+ /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui.h
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget..h
+ /usr/include/assert.h
+ /usr/include/bits/libc-header-start.h
+ /usr/include/bits/long-double.h
+ /usr/include/bits/timesize.h
+ /usr/include/bits/types/__locale_t.h
+ /usr/include/bits/types/locale_t.h
+ /usr/include/bits/wordsize.h
+ /usr/include/features-time64.h
+ /usr/include/features.h
+ /usr/include/gnu/stubs-64.h
+ /usr/include/gnu/stubs.h
+ /usr/include/stdc-predef.h
+ /usr/include/string.h
+ /usr/include/strings.h
+ /usr/include/sys/cdefs.h
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
+
+CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget.cpp
+ /home/mrsws/dev/c/projects/motor_grafico/imgui/imconfig.h
+ /home/mrsws/dev/c/projects/motor_grafico/imgui/imgui.h
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget.h
+ /usr/include/assert.h
+ /usr/include/bits/libc-header-start.h
+ /usr/include/bits/long-double.h
+ /usr/include/bits/timesize.h
+ /usr/include/bits/types/__locale_t.h
+ /usr/include/bits/types/locale_t.h
+ /usr/include/bits/wordsize.h
+ /usr/include/features-time64.h
+ /usr/include/features.h
+ /usr/include/gnu/stubs-64.h
+ /usr/include/gnu/stubs.h
+ /usr/include/stdc-predef.h
+ /usr/include/string.h
+ /usr/include/strings.h
+ /usr/include/sys/cdefs.h
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h
+ /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
 

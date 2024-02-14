@@ -13,6 +13,9 @@ ${CMAKE_SOURCE_DIR}/imgui/imgui_impl_sdl2.cpp
 ${CMAKE_SOURCE_DIR}/imgui/imgui_widgets.cpp
 ${CMAKE_SOURCE_DIR}/imgui/imgui_draw.cpp
 ${CMAKE_SOURCE_DIR}/imgui/imgui_tables.cpp
+${CMAKE_SOURCE_DIR}/src/widget/header_engine_widget.cpp
+${CMAKE_SOURCE_DIR}/src/widget/elements_list_widget.cpp
+
 )
 
 # Configura el proyecto principal
@@ -20,13 +23,16 @@ add_executable(
     motor_grafico 
     src/main.cpp
     src/core/engine.cpp
+    src/widget/header_engine_widget.cpp
+    src/widget/elements_list_widget.cpp
     ${IMGUI_SOURCES}
 )
 
 # Incluye los directorios necesarios
 target_include_directories(motor_grafico PRIVATE 
     ${CMAKE_SOURCE_DIR}/imgui  
-    ${CMAKE_SOURCE_DIR}/widget
+    ${CMAKE_SOURCE_DIR}/src/widget
+    ${CMAKE_SOURCE_DIR}/src/core
 )
 
 find_package(OpenGL REQUIRED)
