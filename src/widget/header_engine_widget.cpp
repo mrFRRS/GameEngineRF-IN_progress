@@ -11,9 +11,9 @@ header_engine_widget::header_engine_widget() {}
 //destructor
 header_engine_widget::~header_engine_widget() {}
 
-void    header_engine_widget::header_widget(){
+void header_engine_widget::header_widget(){
         if (ImGui::BeginMainMenuBar()) {
-              if (ImGui::BeginMenu("File")) {
+              if (ImGui::BeginMenu("project")) {
                    if (ImGui::MenuItem("Create")) { 
                    }
                    if (ImGui::MenuItem("Open", "Ctrl+O")) { 
@@ -24,7 +24,13 @@ void    header_engine_widget::header_widget(){
                     }
              ImGui::EndMenu();
              }
+             if (ImGui::BeginMenu("view"))
+             {  if(ImGui::MenuItem("test1")){
+
+             }
+                        ImGui::EndMenu();
+             }
+             
              ImGui::EndMainMenuBar();
         }
-
 }
