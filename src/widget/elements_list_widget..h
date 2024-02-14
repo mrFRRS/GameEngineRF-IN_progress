@@ -5,11 +5,11 @@
 #ifndef ELEMENTS_LIST_WIDGET_H
 #define ELEMENTS_LIST_WIDGET_H
 
-class Widgets {
+class elemets_widget {
 public:
-    Widgets();   // Constructor
-    ~Widgets();  // Destructor
-    void widgetOne();  // Declaración de la función miembro
+    elemets_widget();   // Constructor
+    ~elemets_widget();  // Destructor
+    void elements_scenario();  // Declaración de la función miembro
 };
 
 #endif

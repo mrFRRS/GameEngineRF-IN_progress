@@ -1,6 +1,6 @@
 #include "engine.h"
 #include "header_engine_widget.h"
-//#include "elements_list_widget..h"
+#include "elements_list_widget..h"
 #include <iostream>
 #include <stdio.h>
 //sdl imports
@@ -13,7 +13,7 @@
 #include "imgui_impl_opengl3.h"
 
 //inicializate 
-//Widgets widgets_created;
+elemets_widget _widgets_created;
 header_engine_widget _header_widget;
 
 //constructor 
@@ -90,10 +90,14 @@ void Engine::inicicalizate(){
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
+
+        //starting header widget
         _header_widget.header_widget();
         _header_widget.~header_engine_widget();
-        //widgets_created.widgetOne();
-        //widgets_created.~Widgets();
+
+        //starting element_list widget
+        _widgets_created.elements_scenario();
+        _widgets_created.~elemets_widget();
         ImGui::Render();
         glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
        // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
