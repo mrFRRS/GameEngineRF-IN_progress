@@ -1,4 +1,6 @@
 #include "engine.h"
+#include "header_engine_widget.h"
+//#include "elements_list_widget..h"
 #include <iostream>
 #include <stdio.h>
 //sdl imports
@@ -10,6 +12,9 @@
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl3.h"
 
+//inicializate 
+//Widgets widgets_created;
+header_engine_widget _header_widget;
 
 //constructor 
 Engine::Engine() : window(nullptr) {}
@@ -26,7 +31,7 @@ void Engine::inicicalizate(){
         SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
         //creating the sdl window 
-        SDL_Window* window = SDL_CreateWindow("Dear ImGui SDL2+OpenGL3 example", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1100, 800, window_flags);
+        SDL_Window* window = SDL_CreateWindow("engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1100, 800, window_flags);
         //creating a opengl renderer 
         SDL_GLContext gl_context = SDL_GL_CreateContext(window);
         SDL_GL_MakeCurrent(window,gl_context);
@@ -85,13 +90,16 @@ void Engine::inicicalizate(){
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
-        
-        // ImGui::Render();
-        // glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
-        // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-        // glClear(GL_COLOR_BUFFER_BIT);
-        // ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-        // SDL_GL_SwapWindow(window);
+        _header_widget.header_widget();
+        _header_widget.~header_engine_widget();
+        //widgets_created.widgetOne();
+        //widgets_created.~Widgets();
+        ImGui::Render();
+        glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+       // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
+        glClear(GL_COLOR_BUFFER_BIT);
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        SDL_GL_SwapWindow(window);
 
 
     }
