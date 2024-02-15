@@ -24,10 +24,7 @@ void header_engine_widget::header_widget(){
                     }
              ImGui::EndMenu();
              }
-             if (ImGui::BeginMenu("view"))
-             {  if(ImGui::MenuItem("test1")){
-
-             }
+             if (ImGui::BeginMenu("view")) {
                         ImGui::EndMenu();
              }
              

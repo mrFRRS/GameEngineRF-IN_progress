@@ -1,6 +1,7 @@
 #include "engine.h"
 #include "header_engine_widget.h"
 #include "elements_list_widget..h"
+#include "folders_list_widget.h"
 #include <iostream>
 #include <stdio.h>
 //sdl imports
@@ -15,6 +16,7 @@
 //inicializate 
 elemets_widget _widgets_created;
 header_engine_widget _header_widget;
+folders_lsit_widget _folders_widget;
 
 //constructor 
 Engine::Engine() : window(nullptr) {}
@@ -94,6 +96,7 @@ void Engine::inicicalizate(){
         //starting header widget
         _header_widget.header_widget();
         _header_widget.~header_engine_widget();
+        _folders_widget.folders_widget();
 
         //starting element_list widget
         _widgets_created.elements_scenario();
