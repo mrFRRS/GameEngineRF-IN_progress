@@ -205,8 +205,11 @@ CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o: \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h /usr/include/SDL2/SDL_opengl.h \
  /usr/include/SDL2/SDL_opengl_glext.h \
- /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget.h \
- /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget..h \
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/scene_view_widget/scene_view.h \
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget/header_engine_widget.h \
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget/elements_list_widget..h \
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/folders_list_widget/folders_list_widget.h \
+ /home/mrsws/dev/c/projects/motor_grafico/src/widget/info_render_widget/info_render_widget.h \
  /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/ostream \
  /usr/include/c++/13.2.1/ios /usr/include/c++/13.2.1/iosfwd \
  /usr/include/c++/13.2.1/bits/stringfwd.h \

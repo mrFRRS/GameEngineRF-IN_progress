@@ -13,15 +13,33 @@
 },
 {
   "directory": "/home/mrsws/dev/c/projects/motor_grafico/build",
-  "command": "/usr/bin/g++  -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2 -g -o CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget.cpp",
-  "file": "/home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget.cpp",
-  "output": "CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o"
+  "command": "/usr/bin/g++  -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2 -g -o CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget/header_engine_widget.cpp",
+  "file": "/home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget/header_engine_widget.cpp",
+  "output": "CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.o"
 },
 {
   "directory": "/home/mrsws/dev/c/projects/motor_grafico/build",
-  "command": "/usr/bin/g++  -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2 -g -o CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget.cpp",
-  "file": "/home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget.cpp",
-  "output": "CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o"
+  "command": "/usr/bin/g++  -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2 -g -o CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget/elements_list_widget.cpp",
+  "file": "/home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget/elements_list_widget.cpp",
+  "output": "CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.o"
+},
+{
+  "directory": "/home/mrsws/dev/c/projects/motor_grafico/build",
+  "command": "/usr/bin/g++  -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2 -g -o CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widget/folders_list_widget/folders_list_widget.cpp",
+  "file": "/home/mrsws/dev/c/projects/motor_grafico/src/widget/folders_list_widget/folders_list_widget.cpp",
+  "output": "CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.o"
+},
+{
+  "directory": "/home/mrsws/dev/c/projects/motor_grafico/build",
+  "command": "/usr/bin/g++  -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2 -g -o CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widget/info_render_widget/info_render_widget.cpp",
+  "file": "/home/mrsws/dev/c/projects/motor_grafico/src/widget/info_render_widget/info_render_widget.cpp",
+  "output": "CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.o"
+},
+{
+  "directory": "/home/mrsws/dev/c/projects/motor_grafico/build",
+  "command": "/usr/bin/g++  -I/home/mrsws/dev/c/projects/motor_grafico/imgui -I/home/mrsws/dev/c/projects/motor_grafico/src/widget -I/home/mrsws/dev/c/projects/motor_grafico/src/core -isystem /usr/include/SDL2 -g -o CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.o -c /home/mrsws/dev/c/projects/motor_grafico/src/widget/scene_view_widget/scene_view_widget.cpp",
+  "file": "/home/mrsws/dev/c/projects/motor_grafico/src/widget/scene_view_widget/scene_view_widget.cpp",
+  "output": "CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.o"
 },
 {
   "directory": "/home/mrsws/dev/c/projects/motor_grafico/build",

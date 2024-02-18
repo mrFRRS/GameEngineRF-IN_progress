@@ -1275,8 +1275,11 @@ CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o: src/core/engine.cpp \
   imgui/imgui_impl_opengl3.h \
   imgui/imgui_impl_sdl2.h \
   src/core/engine.h \
-  src/widget/elements_list_widget..h \
-  src/widget/header_engine_widget.h \
+  src/widget/elements_list_widget/elements_list_widget..h \
+  src/widget/folders_list_widget/folders_list_widget.h \
+  src/widget/header_engine_widget/header_engine_widget.h \
+  src/widget/info_render_widget/info_render_widget.h \
+  src/widget/scene_view_widget/scene_view.h \
   /usr/include/GLES2/gl2.h \
   /usr/include/GLES2/gl2ext.h \
   /usr/include/GLES2/gl2platform.h \
@@ -1651,8 +1654,6 @@ CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o: src/core/engine.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xtestintrin.h
 
 CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
-  imgui/imconfig.h \
-  imgui/imgui.h \
   src/core/engine.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
@@ -1707,10 +1708,17 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/SDL2/begin_code.h \
   /usr/include/SDL2/close_code.h \
   /usr/include/alloca.h \
+  /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/int-ll64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/asm-generic/types.h \
+  /usr/include/asm/bitsperlong.h \
   /usr/include/asm/errno.h \
-  /usr/include/assert.h \
+  /usr/include/asm/posix_types.h \
+  /usr/include/asm/posix_types_64.h \
+  /usr/include/asm/types.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/cpu-set.h \
@@ -1737,6 +1745,9 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/bits/sched.h \
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
+  /usr/include/bits/stat.h \
+  /usr/include/bits/statx-generic.h \
+  /usr/include/bits/statx.h \
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
@@ -1744,6 +1755,7 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/struct_stat.h \
   /usr/include/bits/thread-shared-types.h \
   /usr/include/bits/time.h \
   /usr/include/bits/time64.h \
@@ -1768,6 +1780,8 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_statx.h \
+  /usr/include/bits/types/struct_statx_timestamp.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
   /usr/include/bits/types/struct_tm.h \
@@ -1784,6 +1798,7 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/backward/binders.h \
   /usr/include/c++/13.2.1/bit \
   /usr/include/c++/13.2.1/bits/alloc_traits.h \
+  /usr/include/c++/13.2.1/bits/allocated_ptr.h \
   /usr/include/c++/13.2.1/bits/allocator.h \
   /usr/include/c++/13.2.1/bits/basic_ios.h \
   /usr/include/c++/13.2.1/bits/basic_ios.tcc \
@@ -1791,6 +1806,8 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/bits/basic_string.tcc \
   /usr/include/c++/13.2.1/bits/char_traits.h \
   /usr/include/c++/13.2.1/bits/charconv.h \
+  /usr/include/c++/13.2.1/bits/chrono.h \
+  /usr/include/c++/13.2.1/bits/codecvt.h \
   /usr/include/c++/13.2.1/bits/concept_check.h \
   /usr/include/c++/13.2.1/bits/cpp_type_traits.h \
   /usr/include/c++/13.2.1/bits/cxxabi_forced.h \
@@ -1798,6 +1815,11 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/bits/exception.h \
   /usr/include/c++/13.2.1/bits/exception_defines.h \
   /usr/include/c++/13.2.1/bits/exception_ptr.h \
+  /usr/include/c++/13.2.1/bits/fs_dir.h \
+  /usr/include/c++/13.2.1/bits/fs_fwd.h \
+  /usr/include/c++/13.2.1/bits/fs_ops.h \
+  /usr/include/c++/13.2.1/bits/fs_path.h \
+  /usr/include/c++/13.2.1/bits/fstream.tcc \
   /usr/include/c++/13.2.1/bits/functexcept.h \
   /usr/include/c++/13.2.1/bits/functional_hash.h \
   /usr/include/c++/13.2.1/bits/hash_bytes.h \
@@ -1806,8 +1828,11 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/bits/istream.tcc \
   /usr/include/c++/13.2.1/bits/locale_classes.h \
   /usr/include/c++/13.2.1/bits/locale_classes.tcc \
+  /usr/include/c++/13.2.1/bits/locale_conv.h \
   /usr/include/c++/13.2.1/bits/locale_facets.h \
   /usr/include/c++/13.2.1/bits/locale_facets.tcc \
+  /usr/include/c++/13.2.1/bits/locale_facets_nonio.h \
+  /usr/include/c++/13.2.1/bits/locale_facets_nonio.tcc \
   /usr/include/c++/13.2.1/bits/localefwd.h \
   /usr/include/c++/13.2.1/bits/memory_resource.h \
   /usr/include/c++/13.2.1/bits/memoryfwd.h \
@@ -1816,13 +1841,18 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/bits/new_allocator.h \
   /usr/include/c++/13.2.1/bits/ostream.tcc \
   /usr/include/c++/13.2.1/bits/ostream_insert.h \
+  /usr/include/c++/13.2.1/bits/parse_numbers.h \
   /usr/include/c++/13.2.1/bits/postypes.h \
   /usr/include/c++/13.2.1/bits/predefined_ops.h \
   /usr/include/c++/13.2.1/bits/ptr_traits.h \
+  /usr/include/c++/13.2.1/bits/quoted_string.h \
   /usr/include/c++/13.2.1/bits/range_access.h \
   /usr/include/c++/13.2.1/bits/refwrap.h \
   /usr/include/c++/13.2.1/bits/requires_hosted.h \
+  /usr/include/c++/13.2.1/bits/shared_ptr.h \
+  /usr/include/c++/13.2.1/bits/shared_ptr_base.h \
   /usr/include/c++/13.2.1/bits/specfun.h \
+  /usr/include/c++/13.2.1/bits/sstream.tcc \
   /usr/include/c++/13.2.1/bits/std_abs.h \
   /usr/include/c++/13.2.1/bits/stl_algobase.h \
   /usr/include/c++/13.2.1/bits/stl_construct.h \
@@ -1835,6 +1865,7 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/13.2.1/bits/string_view.tcc \
   /usr/include/c++/13.2.1/bits/stringfwd.h \
+  /usr/include/c++/13.2.1/bits/unique_ptr.h \
   /usr/include/c++/13.2.1/bits/uses_allocator.h \
   /usr/include/c++/13.2.1/bits/uses_allocator_args.h \
   /usr/include/c++/13.2.1/bits/utility.h \
@@ -1842,29 +1873,40 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/cerrno \
   /usr/include/c++/13.2.1/clocale \
   /usr/include/c++/13.2.1/cmath \
+  /usr/include/c++/13.2.1/codecvt \
   /usr/include/c++/13.2.1/cstddef \
+  /usr/include/c++/13.2.1/cstdint \
   /usr/include/c++/13.2.1/cstdio \
   /usr/include/c++/13.2.1/cstdlib \
+  /usr/include/c++/13.2.1/ctime \
   /usr/include/c++/13.2.1/cwchar \
   /usr/include/c++/13.2.1/cwctype \
   /usr/include/c++/13.2.1/debug/assertions.h \
   /usr/include/c++/13.2.1/debug/debug.h \
   /usr/include/c++/13.2.1/exception \
+  /usr/include/c++/13.2.1/ext/aligned_buffer.h \
   /usr/include/c++/13.2.1/ext/alloc_traits.h \
   /usr/include/c++/13.2.1/ext/atomicity.h \
+  /usr/include/c++/13.2.1/ext/concurrence.h \
   /usr/include/c++/13.2.1/ext/numeric_traits.h \
   /usr/include/c++/13.2.1/ext/string_conversions.h \
   /usr/include/c++/13.2.1/ext/type_traits.h \
+  /usr/include/c++/13.2.1/filesystem \
+  /usr/include/c++/13.2.1/fstream \
   /usr/include/c++/13.2.1/initializer_list \
+  /usr/include/c++/13.2.1/iomanip \
   /usr/include/c++/13.2.1/ios \
   /usr/include/c++/13.2.1/iosfwd \
   /usr/include/c++/13.2.1/iostream \
   /usr/include/c++/13.2.1/istream \
   /usr/include/c++/13.2.1/limits \
+  /usr/include/c++/13.2.1/locale \
   /usr/include/c++/13.2.1/math.h \
   /usr/include/c++/13.2.1/new \
   /usr/include/c++/13.2.1/ostream \
   /usr/include/c++/13.2.1/pstl/pstl_config.h \
+  /usr/include/c++/13.2.1/ratio \
+  /usr/include/c++/13.2.1/sstream \
   /usr/include/c++/13.2.1/stdexcept \
   /usr/include/c++/13.2.1/stdlib.h \
   /usr/include/c++/13.2.1/streambuf \
@@ -1887,8 +1929,10 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/type_traits \
   /usr/include/c++/13.2.1/typeinfo \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
@@ -1896,7 +1940,9 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/messages_members.h \
   /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -1905,7 +1951,12 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/inttypes.h \
+  /usr/include/libintl.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/posix_types.h \
+  /usr/include/linux/stat.h \
+  /usr/include/linux/stddef.h \
+  /usr/include/linux/types.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -1919,6 +1970,7 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
+  /usr/include/sys/stat.h \
   /usr/include/sys/types.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
@@ -2022,10 +2074,10 @@ CMakeFiles/motor_grafico.dir/src/main.cpp.o: src/main.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xsavesintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xtestintrin.h
 
-CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o: src/widget/elements_list_widget.cpp \
+CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.o: src/widget/elements_list_widget/elements_list_widget.cpp \
   imgui/imconfig.h \
   imgui/imgui.h \
-  src/widget/elements_list_widget..h \
+  src/widget/elements_list_widget/elements_list_widget..h \
   /usr/include/assert.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/long-double.h \
@@ -2045,10 +2097,237 @@ CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o: src/widget/e
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
 
-CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o: src/widget/header_engine_widget.cpp \
+CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.o: src/widget/folders_list_widget/folders_list_widget.cpp \
   imgui/imconfig.h \
   imgui/imgui.h \
-  src/widget/header_engine_widget.h \
+  src/widget/folders_list_widget/folders_list_widget.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm/errno.h \
+  /usr/include/assert.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/cpu-set.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sched.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/timex.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wctype-wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/c++/13.2.1/backward/binders.h \
+  /usr/include/c++/13.2.1/bit \
+  /usr/include/c++/13.2.1/bits/alloc_traits.h \
+  /usr/include/c++/13.2.1/bits/allocated_ptr.h \
+  /usr/include/c++/13.2.1/bits/allocator.h \
+  /usr/include/c++/13.2.1/bits/basic_ios.h \
+  /usr/include/c++/13.2.1/bits/basic_ios.tcc \
+  /usr/include/c++/13.2.1/bits/basic_string.h \
+  /usr/include/c++/13.2.1/bits/basic_string.tcc \
+  /usr/include/c++/13.2.1/bits/char_traits.h \
+  /usr/include/c++/13.2.1/bits/charconv.h \
+  /usr/include/c++/13.2.1/bits/chrono.h \
+  /usr/include/c++/13.2.1/bits/codecvt.h \
+  /usr/include/c++/13.2.1/bits/concept_check.h \
+  /usr/include/c++/13.2.1/bits/cpp_type_traits.h \
+  /usr/include/c++/13.2.1/bits/cxxabi_forced.h \
+  /usr/include/c++/13.2.1/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13.2.1/bits/exception.h \
+  /usr/include/c++/13.2.1/bits/exception_defines.h \
+  /usr/include/c++/13.2.1/bits/exception_ptr.h \
+  /usr/include/c++/13.2.1/bits/fs_dir.h \
+  /usr/include/c++/13.2.1/bits/fs_fwd.h \
+  /usr/include/c++/13.2.1/bits/fs_ops.h \
+  /usr/include/c++/13.2.1/bits/fs_path.h \
+  /usr/include/c++/13.2.1/bits/functexcept.h \
+  /usr/include/c++/13.2.1/bits/functional_hash.h \
+  /usr/include/c++/13.2.1/bits/hash_bytes.h \
+  /usr/include/c++/13.2.1/bits/invoke.h \
+  /usr/include/c++/13.2.1/bits/ios_base.h \
+  /usr/include/c++/13.2.1/bits/istream.tcc \
+  /usr/include/c++/13.2.1/bits/locale_classes.h \
+  /usr/include/c++/13.2.1/bits/locale_classes.tcc \
+  /usr/include/c++/13.2.1/bits/locale_conv.h \
+  /usr/include/c++/13.2.1/bits/locale_facets.h \
+  /usr/include/c++/13.2.1/bits/locale_facets.tcc \
+  /usr/include/c++/13.2.1/bits/locale_facets_nonio.h \
+  /usr/include/c++/13.2.1/bits/locale_facets_nonio.tcc \
+  /usr/include/c++/13.2.1/bits/localefwd.h \
+  /usr/include/c++/13.2.1/bits/memory_resource.h \
+  /usr/include/c++/13.2.1/bits/memoryfwd.h \
+  /usr/include/c++/13.2.1/bits/move.h \
+  /usr/include/c++/13.2.1/bits/nested_exception.h \
+  /usr/include/c++/13.2.1/bits/new_allocator.h \
+  /usr/include/c++/13.2.1/bits/ostream.tcc \
+  /usr/include/c++/13.2.1/bits/ostream_insert.h \
+  /usr/include/c++/13.2.1/bits/parse_numbers.h \
+  /usr/include/c++/13.2.1/bits/postypes.h \
+  /usr/include/c++/13.2.1/bits/predefined_ops.h \
+  /usr/include/c++/13.2.1/bits/ptr_traits.h \
+  /usr/include/c++/13.2.1/bits/quoted_string.h \
+  /usr/include/c++/13.2.1/bits/range_access.h \
+  /usr/include/c++/13.2.1/bits/refwrap.h \
+  /usr/include/c++/13.2.1/bits/requires_hosted.h \
+  /usr/include/c++/13.2.1/bits/shared_ptr.h \
+  /usr/include/c++/13.2.1/bits/shared_ptr_base.h \
+  /usr/include/c++/13.2.1/bits/sstream.tcc \
+  /usr/include/c++/13.2.1/bits/std_abs.h \
+  /usr/include/c++/13.2.1/bits/stl_algobase.h \
+  /usr/include/c++/13.2.1/bits/stl_construct.h \
+  /usr/include/c++/13.2.1/bits/stl_function.h \
+  /usr/include/c++/13.2.1/bits/stl_iterator.h \
+  /usr/include/c++/13.2.1/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/13.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13.2.1/bits/stl_pair.h \
+  /usr/include/c++/13.2.1/bits/streambuf.tcc \
+  /usr/include/c++/13.2.1/bits/streambuf_iterator.h \
+  /usr/include/c++/13.2.1/bits/string_view.tcc \
+  /usr/include/c++/13.2.1/bits/stringfwd.h \
+  /usr/include/c++/13.2.1/bits/unique_ptr.h \
+  /usr/include/c++/13.2.1/bits/uses_allocator.h \
+  /usr/include/c++/13.2.1/bits/uses_allocator_args.h \
+  /usr/include/c++/13.2.1/bits/utility.h \
+  /usr/include/c++/13.2.1/cctype \
+  /usr/include/c++/13.2.1/cerrno \
+  /usr/include/c++/13.2.1/clocale \
+  /usr/include/c++/13.2.1/codecvt \
+  /usr/include/c++/13.2.1/cstddef \
+  /usr/include/c++/13.2.1/cstdint \
+  /usr/include/c++/13.2.1/cstdio \
+  /usr/include/c++/13.2.1/cstdlib \
+  /usr/include/c++/13.2.1/ctime \
+  /usr/include/c++/13.2.1/cwchar \
+  /usr/include/c++/13.2.1/cwctype \
+  /usr/include/c++/13.2.1/debug/assertions.h \
+  /usr/include/c++/13.2.1/debug/debug.h \
+  /usr/include/c++/13.2.1/exception \
+  /usr/include/c++/13.2.1/ext/aligned_buffer.h \
+  /usr/include/c++/13.2.1/ext/alloc_traits.h \
+  /usr/include/c++/13.2.1/ext/atomicity.h \
+  /usr/include/c++/13.2.1/ext/concurrence.h \
+  /usr/include/c++/13.2.1/ext/numeric_traits.h \
+  /usr/include/c++/13.2.1/ext/string_conversions.h \
+  /usr/include/c++/13.2.1/ext/type_traits.h \
+  /usr/include/c++/13.2.1/filesystem \
+  /usr/include/c++/13.2.1/initializer_list \
+  /usr/include/c++/13.2.1/iomanip \
+  /usr/include/c++/13.2.1/ios \
+  /usr/include/c++/13.2.1/iosfwd \
+  /usr/include/c++/13.2.1/istream \
+  /usr/include/c++/13.2.1/limits \
+  /usr/include/c++/13.2.1/locale \
+  /usr/include/c++/13.2.1/new \
+  /usr/include/c++/13.2.1/ostream \
+  /usr/include/c++/13.2.1/pstl/pstl_config.h \
+  /usr/include/c++/13.2.1/ratio \
+  /usr/include/c++/13.2.1/sstream \
+  /usr/include/c++/13.2.1/stdexcept \
+  /usr/include/c++/13.2.1/streambuf \
+  /usr/include/c++/13.2.1/string \
+  /usr/include/c++/13.2.1/string_view \
+  /usr/include/c++/13.2.1/system_error \
+  /usr/include/c++/13.2.1/tuple \
+  /usr/include/c++/13.2.1/type_traits \
+  /usr/include/c++/13.2.1/typeinfo \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
+  /usr/include/ctype.h \
+  /usr/include/endian.h \
+  /usr/include/errno.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/libintl.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
+  /usr/include/pthread.h \
+  /usr/include/sched.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/single_threaded.h \
+  /usr/include/sys/types.h \
+  /usr/include/time.h \
+  /usr/include/wchar.h \
+  /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h
+
+CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.o: src/widget/header_engine_widget/header_engine_widget.cpp \
+  imgui/imconfig.h \
+  imgui/imgui.h \
+  src/widget/header_engine_widget/header_engine_widget.h \
   /usr/include/assert.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/long-double.h \
@@ -2068,6 +2347,114 @@ CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o: src/widget/h
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
 
+CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.o: src/widget/info_render_widget/info_render_widget.cpp \
+  imgui/imconfig.h \
+  imgui/imgui.h \
+  src/widget/info_render_widget/info_render_widget.h \
+  /usr/include/assert.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
+
+CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.o: src/widget/scene_view_widget/scene_view_widget.cpp \
+  imgui/imconfig.h \
+  imgui/imgui.h \
+  src/widget/scene_view_widget/scene_view.h \
+  /usr/include/assert.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
+
+
+src/widget/scene_view_widget/scene_view_widget.cpp:
+
+src/widget/folders_list_widget/folders_list_widget.cpp:
+
+/usr/include/linux/types.h:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/linux/stat.h:
+
+/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++io.h:
+
+/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/basic_file.h:
+
+/usr/include/c++/13.2.1/locale:
+
+/usr/include/c++/13.2.1/iomanip:
+
+/usr/include/c++/13.2.1/filesystem:
+
+/usr/include/c++/13.2.1/cstdint:
+
+/usr/include/c++/13.2.1/codecvt:
+
+/usr/include/c++/13.2.1/bits/shared_ptr_base.h:
+
+/usr/include/c++/13.2.1/bits/quoted_string.h:
+
+/usr/include/c++/13.2.1/bits/locale_conv.h:
+
+/usr/include/c++/13.2.1/bits/fstream.tcc:
+
+/usr/include/c++/13.2.1/bits/shared_ptr.h:
+
+/usr/include/c++/13.2.1/bits/fs_path.h:
+
+/usr/include/c++/13.2.1/bits/fs_dir.h:
+
+/usr/include/c++/13.2.1/bits/codecvt.h:
+
+/usr/include/c++/13.2.1/bits/chrono.h:
+
+/usr/include/bits/types/struct_statx.h:
+
+/usr/include/bits/struct_stat.h:
+
+/usr/include/bits/statx.h:
+
+/usr/include/bits/statx-generic.h:
+
+/usr/include/asm/types.h:
+
+/usr/include/asm/posix_types_64.h:
+
+/usr/include/asm/bitsperlong.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/c++/13.2.1/ext/concurrence.h:
+
+/usr/include/asm-generic/int-ll64.h:
 
 /usr/include/sys/single_threaded.h:
 
@@ -2085,7 +2472,11 @@ CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o: src/widget/h
 
 /usr/include/c++/13.2.1/tuple:
 
+/usr/include/c++/13.2.1/bits/sstream.tcc:
+
 /usr/include/c++/13.2.1/string_view:
+
+/usr/include/c++/13.2.1/fstream:
 
 /usr/include/c++/13.2.1/string:
 
@@ -2109,8 +2500,6 @@ CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o: src/widget/h
 
 /usr/include/c++/13.2.1/exception:
 
-src/widget/header_engine_widget.cpp:
-
 /usr/include/c++/13.2.1/cstdio:
 
 /usr/include/c++/13.2.1/cstddef:
@@ -2133,6 +2522,8 @@ src/widget/header_engine_widget.cpp:
 
 /usr/include/c++/13.2.1/bits/range_access.h:
 
+/usr/include/sys/stat.h:
+
 /usr/include/c++/13.2.1/bits/ostream_insert.h:
 
 /usr/include/c++/13.2.1/ios:
@@ -2142,8 +2533,6 @@ src/widget/header_engine_widget.cpp:
 /usr/include/c++/13.2.1/bits/nested_exception.h:
 
 /usr/include/c++/13.2.1/bits/locale_facets.h:
-
-/usr/include/c++/13.2.1/bits/locale_classes.tcc:
 
 /usr/include/c++/13.2.1/bits/istream.tcc:
 
@@ -2175,7 +2564,11 @@ src/widget/header_engine_widget.cpp:
 
 /usr/include/bits/timex.h:
 
+/usr/include/asm/posix_types.h:
+
 /usr/include/bits/time.h:
+
+src/widget/info_render_widget/info_render_widget.cpp:
 
 /usr/include/bits/setjmp.h:
 
@@ -2195,7 +2588,17 @@ src/widget/header_engine_widget.cpp:
 
 /usr/include/GLES2/gl2ext.h:
 
-src/widget/elements_list_widget..h:
+src/widget/scene_view_widget/scene_view.h:
+
+src/widget/info_render_widget/info_render_widget.h:
+
+/usr/include/c++/13.2.1/ctime:
+
+src/widget/header_engine_widget/header_engine_widget.h:
+
+/usr/include/c++/13.2.1/bits/locale_classes.tcc:
+
+src/widget/elements_list_widget/elements_list_widget..h:
 
 src/core/engine.h:
 
@@ -2216,8 +2619,6 @@ imgui/imgui_widgets.cpp:
 /usr/include/X11/Xlib.h:
 
 /usr/include/c++/13.2.1/bits/allocator.h:
-
-src/widget/header_engine_widget.h:
 
 /usr/include/X11/Xfuncproto.h:
 
@@ -2250,6 +2651,8 @@ src/widget/header_engine_widget.h:
 /usr/include/SDL2/SDL_power.h:
 
 /usr/include/SDL2/SDL_platform.h:
+
+/usr/include/c++/13.2.1/ratio:
 
 /usr/include/c++/13.2.1/bits/hash_bytes.h:
 
@@ -2299,6 +2702,8 @@ src/widget/header_engine_widget.h:
 
 /usr/include/linux/limits.h:
 
+/usr/include/c++/13.2.1/bits/parse_numbers.h:
+
 /usr/include/asm/errno.h:
 
 /usr/include/bits/stdint-uintn.h:
@@ -2308,6 +2713,10 @@ src/widget/header_engine_widget.h:
 /usr/include/GLES2/gl2.h:
 
 /usr/include/bits/mathcalls.h:
+
+/usr/include/asm-generic/types.h:
+
+/usr/include/asm-generic/bitsperlong.h:
 
 /usr/include/c++/13.2.1/tr1/special_function_util.h:
 
@@ -2327,17 +2736,25 @@ imgui/imgui_impl_opengl3_loader.h:
 
 /usr/include/SDL2/SDL_clipboard.h:
 
+/usr/include/libintl.h:
+
 /usr/include/bits/endianness.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/avx512fintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/prfchiintrin.h:
 
+/usr/include/bits/types/struct_statx_timestamp.h:
+
 /usr/include/SDL2/SDL_opengl.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/wbnoinvdintrin.h:
 
+/usr/include/c++/13.2.1/ext/aligned_buffer.h:
+
 /usr/include/c++/13.2.1/tr1/beta_function.tcc:
+
+/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/time_members.h:
 
 /usr/include/SDL2/SDL_loadso.h:
 
@@ -2395,6 +2812,8 @@ imgui/imgui_impl_opengl3_loader.h:
 
 /usr/include/c++/13.2.1/bits/ptr_traits.h:
 
+/usr/include/c++/13.2.1/bits/locale_facets_nonio.tcc:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/xsavecintrin.h:
 
 /usr/include/c++/13.2.1/bit:
@@ -2414,6 +2833,8 @@ src/main.cpp:
 /usr/include/SDL2/SDL_video.h:
 
 /usr/include/bits/byteswap.h:
+
+/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/messages_members.h:
 
 /usr/include/bits/timesize.h:
 
@@ -2449,9 +2870,9 @@ src/main.cpp:
 
 /usr/include/gnu/stubs.h:
 
-src/widget/elements_list_widget.cpp:
-
 /usr/include/c++/13.2.1/tr1/legendre_function.tcc:
+
+/usr/include/c++/13.2.1/sstream:
 
 /usr/include/time.h:
 
@@ -2487,7 +2908,11 @@ imgui/imgui.h:
 
 /usr/include/bits/fp-fast.h:
 
+/usr/include/c++/13.2.1/bits/fs_fwd.h:
+
 /usr/include/bits/flt-eval-method.h:
+
+/usr/include/linux/posix_types.h:
 
 /usr/include/bits/types/FILE.h:
 
@@ -2500,6 +2925,8 @@ imgui/imgui_impl_opengl3.cpp:
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/clwbintrin.h:
 
 /usr/include/bits/types/timer_t.h:
+
+/usr/include/c++/13.2.1/bits/locale_facets_nonio.h:
 
 imgui/imgui_internal.h:
 
@@ -2583,6 +3010,8 @@ imgui/imgui_impl_sdl2.cpp:
 
 /usr/include/limits.h:
 
+/usr/include/c++/13.2.1/bits/fs_ops.h:
+
 /usr/include/c++/13.2.1/bits/ios_base.h:
 
 /usr/include/bits/sched.h:
@@ -2647,6 +3076,8 @@ imgui/imstb_textedit.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/amxbf16intrin.h:
 
+src/widget/folders_list_widget/folders_list_widget.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/avxvnniint8intrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/avxvnniintrin.h:
@@ -2654,6 +3085,8 @@ imgui/imstb_textedit.h:
 /usr/include/ctype.h:
 
 /usr/include/SDL2/SDL_gesture.h:
+
+src/widget/elements_list_widget/elements_list_widget.cpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/amxcomplexintrin.h:
 
@@ -2691,7 +3124,11 @@ imgui/imstb_rectpack.h:
 
 imgui/imgui_draw.cpp:
 
+src/widget/header_engine_widget/header_engine_widget.cpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/avx512vbmi2intrin.h:
+
+/usr/include/c++/13.2.1/bits/allocated_ptr.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/avx512vbmiintrin.h:
 
@@ -2764,6 +3201,10 @@ imgui/imgui_draw.cpp:
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/gfniintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/lzcntintrin.h:
+
+/usr/include/c++/13.2.1/bits/unique_ptr.h:
+
+/usr/include/bits/stat.h:
 
 /usr/include/c++/13.2.1/stdlib.h:
 

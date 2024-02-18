@@ -13,8 +13,12 @@ ${CMAKE_SOURCE_DIR}/imgui/imgui_impl_sdl2.cpp
 ${CMAKE_SOURCE_DIR}/imgui/imgui_widgets.cpp
 ${CMAKE_SOURCE_DIR}/imgui/imgui_draw.cpp
 ${CMAKE_SOURCE_DIR}/imgui/imgui_tables.cpp
-${CMAKE_SOURCE_DIR}/src/widget/header_engine_widget.cpp
-${CMAKE_SOURCE_DIR}/src/widget/elements_list_widget.cpp
+
+${CMAKE_SOURCE_DIR}/src/widget/header_engine_widget/header_engine_widget.cpp
+${CMAKE_SOURCE_DIR}/src/widget/elements_list_widget/elements_list_widget.cpp
+${CMAKE_SOURCE_DIR}/src/widget/folders_list_widget/folders_list_widget.cpp
+${CMAKE_SOURCE_DIR}/src/widget/info_render_widget/info_render_widget.cpp
+${CMAKE_SOURCE_DIR}/src/widget/scene_view_widget/scene_view_widget.cpp
 
 )
 
@@ -23,8 +27,11 @@ add_executable(
     motor_grafico 
     src/main.cpp
     src/core/engine.cpp
-    src/widget/header_engine_widget.cpp
-    src/widget/elements_list_widget.cpp
+    src/widget/header_engine_widget/header_engine_widget.cpp
+    src/widget/elements_list_widget/elements_list_widget.cpp
+    src/widget/folders_list_widget/folders_list_widget.cpp
+    src/widget/info_render_widget/info_render_widget.cpp
+    src/widget/scene_view_widget/scene_view_widget.cpp
     ${IMGUI_SOURCES}
 )
 

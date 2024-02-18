@@ -321,53 +321,125 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/widget/elements_list_widget.o: src/widget/elements_list_widget.cpp.o
-.PHONY : src/widget/elements_list_widget.o
+src/widget/elements_list_widget/elements_list_widget.o: src/widget/elements_list_widget/elements_list_widget.cpp.o
+.PHONY : src/widget/elements_list_widget/elements_list_widget.o
 
 # target to build an object file
-src/widget/elements_list_widget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.o
-.PHONY : src/widget/elements_list_widget.cpp.o
+src/widget/elements_list_widget/elements_list_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.o
+.PHONY : src/widget/elements_list_widget/elements_list_widget.cpp.o
 
-src/widget/elements_list_widget.i: src/widget/elements_list_widget.cpp.i
-.PHONY : src/widget/elements_list_widget.i
+src/widget/elements_list_widget/elements_list_widget.i: src/widget/elements_list_widget/elements_list_widget.cpp.i
+.PHONY : src/widget/elements_list_widget/elements_list_widget.i
 
 # target to preprocess a source file
-src/widget/elements_list_widget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.i
-.PHONY : src/widget/elements_list_widget.cpp.i
+src/widget/elements_list_widget/elements_list_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.i
+.PHONY : src/widget/elements_list_widget/elements_list_widget.cpp.i
 
-src/widget/elements_list_widget.s: src/widget/elements_list_widget.cpp.s
-.PHONY : src/widget/elements_list_widget.s
+src/widget/elements_list_widget/elements_list_widget.s: src/widget/elements_list_widget/elements_list_widget.cpp.s
+.PHONY : src/widget/elements_list_widget/elements_list_widget.s
 
 # target to generate assembly for a file
-src/widget/elements_list_widget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget.cpp.s
-.PHONY : src/widget/elements_list_widget.cpp.s
+src/widget/elements_list_widget/elements_list_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.s
+.PHONY : src/widget/elements_list_widget/elements_list_widget.cpp.s
 
-src/widget/header_engine_widget.o: src/widget/header_engine_widget.cpp.o
-.PHONY : src/widget/header_engine_widget.o
+src/widget/folders_list_widget/folders_list_widget.o: src/widget/folders_list_widget/folders_list_widget.cpp.o
+.PHONY : src/widget/folders_list_widget/folders_list_widget.o
 
 # target to build an object file
-src/widget/header_engine_widget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.o
-.PHONY : src/widget/header_engine_widget.cpp.o
+src/widget/folders_list_widget/folders_list_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.o
+.PHONY : src/widget/folders_list_widget/folders_list_widget.cpp.o
 
-src/widget/header_engine_widget.i: src/widget/header_engine_widget.cpp.i
-.PHONY : src/widget/header_engine_widget.i
+src/widget/folders_list_widget/folders_list_widget.i: src/widget/folders_list_widget/folders_list_widget.cpp.i
+.PHONY : src/widget/folders_list_widget/folders_list_widget.i
 
 # target to preprocess a source file
-src/widget/header_engine_widget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.i
-.PHONY : src/widget/header_engine_widget.cpp.i
+src/widget/folders_list_widget/folders_list_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.i
+.PHONY : src/widget/folders_list_widget/folders_list_widget.cpp.i
 
-src/widget/header_engine_widget.s: src/widget/header_engine_widget.cpp.s
-.PHONY : src/widget/header_engine_widget.s
+src/widget/folders_list_widget/folders_list_widget.s: src/widget/folders_list_widget/folders_list_widget.cpp.s
+.PHONY : src/widget/folders_list_widget/folders_list_widget.s
 
 # target to generate assembly for a file
-src/widget/header_engine_widget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget.cpp.s
-.PHONY : src/widget/header_engine_widget.cpp.s
+src/widget/folders_list_widget/folders_list_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.s
+.PHONY : src/widget/folders_list_widget/folders_list_widget.cpp.s
+
+src/widget/header_engine_widget/header_engine_widget.o: src/widget/header_engine_widget/header_engine_widget.cpp.o
+.PHONY : src/widget/header_engine_widget/header_engine_widget.o
+
+# target to build an object file
+src/widget/header_engine_widget/header_engine_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.o
+.PHONY : src/widget/header_engine_widget/header_engine_widget.cpp.o
+
+src/widget/header_engine_widget/header_engine_widget.i: src/widget/header_engine_widget/header_engine_widget.cpp.i
+.PHONY : src/widget/header_engine_widget/header_engine_widget.i
+
+# target to preprocess a source file
+src/widget/header_engine_widget/header_engine_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.i
+.PHONY : src/widget/header_engine_widget/header_engine_widget.cpp.i
+
+src/widget/header_engine_widget/header_engine_widget.s: src/widget/header_engine_widget/header_engine_widget.cpp.s
+.PHONY : src/widget/header_engine_widget/header_engine_widget.s
+
+# target to generate assembly for a file
+src/widget/header_engine_widget/header_engine_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.s
+.PHONY : src/widget/header_engine_widget/header_engine_widget.cpp.s
+
+src/widget/info_render_widget/info_render_widget.o: src/widget/info_render_widget/info_render_widget.cpp.o
+.PHONY : src/widget/info_render_widget/info_render_widget.o
+
+# target to build an object file
+src/widget/info_render_widget/info_render_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.o
+.PHONY : src/widget/info_render_widget/info_render_widget.cpp.o
+
+src/widget/info_render_widget/info_render_widget.i: src/widget/info_render_widget/info_render_widget.cpp.i
+.PHONY : src/widget/info_render_widget/info_render_widget.i
+
+# target to preprocess a source file
+src/widget/info_render_widget/info_render_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.i
+.PHONY : src/widget/info_render_widget/info_render_widget.cpp.i
+
+src/widget/info_render_widget/info_render_widget.s: src/widget/info_render_widget/info_render_widget.cpp.s
+.PHONY : src/widget/info_render_widget/info_render_widget.s
+
+# target to generate assembly for a file
+src/widget/info_render_widget/info_render_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.s
+.PHONY : src/widget/info_render_widget/info_render_widget.cpp.s
+
+src/widget/scene_view_widget/scene_view_widget.o: src/widget/scene_view_widget/scene_view_widget.cpp.o
+.PHONY : src/widget/scene_view_widget/scene_view_widget.o
+
+# target to build an object file
+src/widget/scene_view_widget/scene_view_widget.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.o
+.PHONY : src/widget/scene_view_widget/scene_view_widget.cpp.o
+
+src/widget/scene_view_widget/scene_view_widget.i: src/widget/scene_view_widget/scene_view_widget.cpp.i
+.PHONY : src/widget/scene_view_widget/scene_view_widget.i
+
+# target to preprocess a source file
+src/widget/scene_view_widget/scene_view_widget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.i
+.PHONY : src/widget/scene_view_widget/scene_view_widget.cpp.i
+
+src/widget/scene_view_widget/scene_view_widget.s: src/widget/scene_view_widget/scene_view_widget.cpp.s
+.PHONY : src/widget/scene_view_widget/scene_view_widget.s
+
+# target to generate assembly for a file
+src/widget/scene_view_widget/scene_view_widget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor_grafico.dir/build.make CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.s
+.PHONY : src/widget/scene_view_widget/scene_view_widget.cpp.s
 
 # Help Target
 help:
@@ -402,12 +474,21 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/widget/elements_list_widget.o"
-	@echo "... src/widget/elements_list_widget.i"
-	@echo "... src/widget/elements_list_widget.s"
-	@echo "... src/widget/header_engine_widget.o"
-	@echo "... src/widget/header_engine_widget.i"
-	@echo "... src/widget/header_engine_widget.s"
+	@echo "... src/widget/elements_list_widget/elements_list_widget.o"
+	@echo "... src/widget/elements_list_widget/elements_list_widget.i"
+	@echo "... src/widget/elements_list_widget/elements_list_widget.s"
+	@echo "... src/widget/folders_list_widget/folders_list_widget.o"
+	@echo "... src/widget/folders_list_widget/folders_list_widget.i"
+	@echo "... src/widget/folders_list_widget/folders_list_widget.s"
+	@echo "... src/widget/header_engine_widget/header_engine_widget.o"
+	@echo "... src/widget/header_engine_widget/header_engine_widget.i"
+	@echo "... src/widget/header_engine_widget/header_engine_widget.s"
+	@echo "... src/widget/info_render_widget/info_render_widget.o"
+	@echo "... src/widget/info_render_widget/info_render_widget.i"
+	@echo "... src/widget/info_render_widget/info_render_widget.s"
+	@echo "... src/widget/scene_view_widget/scene_view_widget.o"
+	@echo "... src/widget/scene_view_widget/scene_view_widget.i"
+	@echo "... src/widget/scene_view_widget/scene_view_widget.s"
 .PHONY : help
 
 
