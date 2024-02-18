@@ -1,54 +1,92 @@
-
-#include <iostream>
-#include <SDL2/SDL.h>
+//paths
+#include "core/create_project.h"
 #include "core/engine.h"
+//sdl including
+#include <SDL2/SDL.h>
+//file handle
+#include <iostream>
 #include "filesystem"
 #include "fstream"
 #include <cstdlib>
 #include "sys/stat.h"
+#include "dirent.h"
+
+
+bool isDirectoryEmpty(const std::string& path) {
+    DIR* dir = opendir(path.c_str());
+    if (dir == nullptr) {
+        std::cerr << "Error abriendo el directorio: " << path << "\n";
+        return true;  // Tratamos un error como si el directorio estuviera vacío
+    }
+
+    struct dirent* entry;
+    while ((entry = readdir(dir)) != nullptr) {
+        // Ignorar los directorios "." y ".."
+        if (std::string(entry->d_name) != "." && std::string(entry->d_name) != "..") {
+            closedir(dir);
+            return false;  // El directorio no está vacío
+        }
+    }
+
+    closedir(dir);
+    return true;  // El directorio está vacío
+}
 
 //verifing if path exists, if not exists, create a new one
 bool not_videoGameCreated(){
     const char* homedir = getenv("HOME");
     std::string directoryToCreate = std::string(homedir) + "/proyects_FR";
-    std::string directoryGamesCreated = directoryToCreate + '/';
 
     struct stat info;
     if(homedir != nullptr){
         if(stat(directoryToCreate.c_str(), &info) != 0){
              //el direcotrio no existe, entonces se crea un directorio para los projectos
              if(mkdir(directoryToCreate.c_str(), 0777) !=0 ){
-                std::cout<<"se creo correctamente el direcotio en la ruta"<< directoryToCreate<<"\n"<< std::endl;
-                return true;
-             }else{
                 std::cerr << "error creando el direcotrio de los proyectos";
                 return false;
+             }else{
+                std::cout<<"se creo correctamente el direcotio en la ruta"<< directoryToCreate<<"\n"<< std::endl;
+                return true;
              }
-        }else{
-            return true;
+        }else if (isDirectoryEmpty(directoryToCreate)) {
+            std::cout << "El directorio está vacío.\n";
+            return true;  // El directorio está vacío y necesita ser inicializado
+        } else {
+            std::cout << "El directorio no está vacío.\n";
         }
-    }else {
+    } else {
         std::cerr << "No se pudo obtener el directorio home del usuario.\n";
         return false;
     }
-    return true;
+
+    return false;
 }
 
 
 int main(int, char**) {
-    //creacmos el constructor
-    Engine engine;
-// Setup Dear ImGui context
 
     if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0){
         std::cerr<<"no se pudo inicializar Sdl:"<<std::endl;
         return -1;
     }
-    not_videoGameCreated();
-    engine.inicicalizate();
-    engine.shootdown();
-    //inicialitate the window and opengl renderer
-     //eliminamos el constructor
+
+    if (not_videoGameCreated()) {
+        create_project _createproject;
+
+        _createproject.create_project_window();
+        _createproject.shootdown();
+        _createproject.~create_project();
+
+    } else {
+
+        Engine _engine;
+
+        _engine.inicicalizate();
+        _engine.shootdown();
+        _engine.~Engine();
+
+    }
+
     return 0;
 
 }
