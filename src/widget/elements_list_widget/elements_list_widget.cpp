@@ -27,7 +27,7 @@ void elemets_widget::elements_scenario(){
     
 
 
-    ImGui::Begin("Menu Lateral", nullptr,ImGuiWindowFlags_NoMove);
+    ImGui::Begin("Menu Lateral", nullptr,ImGuiWindowFlags_MenuBar);
     ImGui::SetWindowPos(ImVec2(0,20), ImGuiCond_Always);
     ImGui::SetWindowSize(ImVec2(250,700), ImGuiCond_Always);
 

@@ -1,7 +1,9 @@
 #include "engine.h"
-#include "header_engine_widget.h"
-#include "elements_list_widget..h"
-#include "folders_list_widget.h"
+#include "scene_view_widget/scene_view.h"
+#include "header_engine_widget/header_engine_widget.h"
+#include "elements_list_widget/elements_list_widget..h"
+#include "folders_list_widget/folders_list_widget.h"
+#include "info_render_widget/info_render_widget.h"
 #include <iostream>
 #include <stdio.h>
 //sdl imports
@@ -17,7 +19,8 @@
 elemets_widget _widgets_created;
 header_engine_widget _header_widget;
 folders_lsit_widget _folders_widget;
-
+info_render_widget _render_widget;
+scene_view _scene_view_widget;
 //constructor 
 Engine::Engine() : window(nullptr) {}
 
@@ -94,15 +97,23 @@ void Engine::inicicalizate(){
 
 
         //starting header widget
+        _render_widget.render_widget();
         _header_widget.header_widget();
-        _header_widget.~header_engine_widget();
-        _folders_widget.folders_widget();
-
-        //starting element_list widget
         _widgets_created.elements_scenario();
+        _folders_widget.folders_widget();
+        _scene_view_widget.scene_view_widget();
+
+        //deleteing instance element_list widget
+        _render_widget.~info_render_widget();
+        _header_widget.~header_engine_widget();
         _widgets_created.~elemets_widget();
+        _folders_widget.~folders_lsit_widget();
+        _scene_view_widget.~scene_view();
+
+        //display function
         ImGui::Render();
         glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+        glClearColor(0.0f,0.0f,0.0f,0.0f);
        // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
