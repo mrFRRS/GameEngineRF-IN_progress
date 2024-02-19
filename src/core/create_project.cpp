@@ -6,9 +6,12 @@
 #include "SDL.h"
 #include "SDL_opengl.h"
 #include <SDL_opengles2.h>
-//imgui imports
-#include "imgui.h"
+#include "SDL_opengl.h"
+//gtk imports
 #include "imgui_impl_sdl2.h"
+#include "imgui_impl_opengl3.h"
+#include "imgui.h"
+
 
 //inicializate
 create_project::create_project(){}
@@ -19,20 +22,39 @@ create_project::~create_project(){
 
 
 void create_project::create_project_window(){
-        
+
         SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
         SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
         SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
-        SDL_Window* window = SDL_CreateWindow("create project",SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, window_flags);
+        //creating the sdl window 
+        SDL_Window* window = SDL_CreateWindow("engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 600, 600, window_flags);
+        //creating a opengl renderer 
+        SDL_GLContext gl_context = SDL_GL_CreateContext(window);
+        SDL_GL_MakeCurrent(window,gl_context);
+        SDL_GL_GetSwapInterval();
+        
+        // Setup Dear ImGui context
+        IMGUI_CHECKVERSION();
+        ImGui::CreateContext();
+        ImGuiIO& io = ImGui::GetIO();
 
+        //config flags
+        io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+        io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
 
+         // Setup Dear ImGui style
+         ImGui::StyleColorsDark();
+        //ImGui::StyleColorsLight();
 
+        //set up platafforms/ backends 
+        ImGui_ImplSDL2_InitForOpenGL(window,gl_context);
+        ImGui_ImplOpenGL3_Init();
 
-        if(window == nullptr){
-            std::cout<<"error al crear la ventana"<<std::endl;
-            SDL_Quit();
-         }
+    if(window == nullptr){
+        std::cout<<"error al crear la ventana"<<std::endl;
+        SDL_Quit();
+    }
 
        // Main loop
     bool done = false;
@@ -53,16 +75,46 @@ void create_project::create_project_window(){
         SDL_Event event;
         while (SDL_PollEvent(&event))
         {
+            ImGui_ImplSDL2_ProcessEvent(&event);
             if (event.type == SDL_QUIT)
                 done = true;
             if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
                 done = true;
         }
 
+        // Start the Dear ImGui frame
+        ImGui_ImplOpenGL3_NewFrame();
+        ImGui_ImplSDL2_NewFrame();
+        ImGui::NewFrame();
+
+        ImGui::Begin("Mi Ventana ImGui");
+
+        if (ImGui::Button("Clic Me")) {
+            // Manejar clic en el botón
+            printf("¡Botón ImGui clickeado!\n");
+        }
+
+        ImGui::End();
+
+        //display function
+        ImGui::Render();
+        glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+        glClearColor(0.0f,0.0f,0.0f,0.0f);
+       // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
+        glClear(GL_COLOR_BUFFER_BIT);
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        SDL_GL_SwapWindow(window);
+
+
     }
 #ifdef __EMSCRIPTEN__
     EMSCRIPTEN_MAINLOOP_END;
 #endif
+    SDL_GL_DeleteContext(gl_Contenxt);
+    ImGui_ImplOpenGL3_Shutdown();
+    ImGui_ImplSDL2_Shutdown();
+    ImGui::DestroyContext();
+
 }
 
 
