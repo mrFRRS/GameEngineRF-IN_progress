@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include "sys/stat.h"
 #include "dirent.h"
+#include "gtkmm.h"
 
 
 bool isDirectoryEmpty(const std::string& path) {
@@ -63,7 +64,10 @@ bool not_videoGameCreated(){
 }
 
 
-int main(int, char**) {
+int main(int argc, char *argv[]) {
+    
+    auto app = Gtk::Application::create(argc,argv,"com.example.fr_engine");
+
 
     if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0){
         std::cerr<<"no se pudo inicializar Sdl:"<<std::endl;
@@ -72,10 +76,9 @@ int main(int, char**) {
 
     if (not_videoGameCreated()) {
         create_project _createproject;
-
         _createproject.create_project_window();
-        _createproject.shootdown();
-        _createproject.~create_project();
+
+        return app->run(_createproject);
 
     } else {
 
@@ -83,10 +86,11 @@ int main(int, char**) {
 
         _engine.inicicalizate();
         _engine.shootdown();
-        _engine.~Engine();
+
 
     }
-
+    
+    SDL_Quit();
     return 0;
 
 }
