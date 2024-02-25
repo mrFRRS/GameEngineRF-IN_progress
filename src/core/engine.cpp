@@ -103,12 +103,12 @@ void Engine::inicicalizate(){
         _folders_widget.folders_widget();
         _scene_view_widget.scene_view_widget();
 
-        //deleteing instance element_list widget
-        _render_widget.~info_render_widget();
-        _header_widget.~header_engine_widget();
-        _widgets_created.~elemets_widget();
-        _folders_widget.~folders_lsit_widget();
-        _scene_view_widget.~scene_view();
+        // //deleteing instance element_list widget
+        // _render_widget.~info_render_widget();
+        // _header_widget.~header_engine_widget();
+        // _widgets_created.~elemets_widget();
+        // _folders_widget.~folders_lsit_widget();
+        // _scene_view_widget.~scene_view();
 
         //display function
         ImGui::Render();

@@ -10,8 +10,7 @@
 #include <cstdlib>
 #include "sys/stat.h"
 #include "dirent.h"
-#include "gtkmm.h"
-
+#include "imgui.h"
 
 bool isDirectoryEmpty(const std::string& path) {
     DIR* dir = opendir(path.c_str());
@@ -30,10 +29,10 @@ bool isDirectoryEmpty(const std::string& path) {
     }
 
     closedir(dir);
-    return true;  // El directorio está vacío
+     return true;  // El directorio está vacío
 }
 
-//verifing if path exists, if not exists, create a new one
+    //verifing if path exists, if not exists, create a new one
 bool not_videoGameCreated(){
     const char* homedir = getenv("HOME");
     std::string directoryToCreate = std::string(homedir) + "/proyects_FR";
@@ -41,14 +40,14 @@ bool not_videoGameCreated(){
     struct stat info;
     if(homedir != nullptr){
         if(stat(directoryToCreate.c_str(), &info) != 0){
-             //el direcotrio no existe, entonces se crea un directorio para los projectos
-             if(mkdir(directoryToCreate.c_str(), 0777) !=0 ){
+            //el direcotrio no existe, entonces se crea un directorio para los projectos
+            if(mkdir(directoryToCreate.c_str(), 0777) !=0 ){
                 std::cerr << "error creando el direcotrio de los proyectos";
                 return false;
-             }else{
+            }else{
                 std::cout<<"se creo correctamente el direcotio en la ruta"<< directoryToCreate<<"\n"<< std::endl;
                 return true;
-             }
+            }
         }else if (isDirectoryEmpty(directoryToCreate)) {
             std::cout << "El directorio está vacío.\n";
             return true;  // El directorio está vacío y necesita ser inicializado
@@ -56,7 +55,7 @@ bool not_videoGameCreated(){
             std::cout << "El directorio no está vacío.\n";
         }
     } else {
-        std::cerr << "No se pudo obtener el directorio home del usuario.\n";
+        std::cerr << "./No se pudo obtener el directorio home del usuario.\n";
         return false;
     }
 
@@ -65,9 +64,7 @@ bool not_videoGameCreated(){
 
 
 int main(int argc, char *argv[]) {
-    
-    auto app = Gtk::Application::create(argc,argv,"com.example.fr_engine");
-
+        
 
     if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0){
         std::cerr<<"no se pudo inicializar Sdl:"<<std::endl;
@@ -75,22 +72,15 @@ int main(int argc, char *argv[]) {
     }
 
     if (not_videoGameCreated()) {
-        create_project _createproject;
-        _createproject.create_project_window();
-
-        return app->run(_createproject);
-
-    } else {
-
+        create_project _create_project;
+        // auto app = Gtk::Application::create("org.gtkmm.examples.base");
+        //  return app->make_window_and_run<create_project>(argc, argv);
+    } else{
         Engine _engine;
-
         _engine.inicicalizate();
         _engine.shootdown();
-
-
     }
-    
+        
     SDL_Quit();
     return 0;
-
 }
