@@ -1,5 +1,5 @@
 //paths
-#include "core/create_project.h"
+#include "gtk/create_project.h"
 #include "core/engine.h"
 //sdl including
 #include <SDL2/SDL.h>
@@ -10,7 +10,7 @@
 #include <cstdlib>
 #include "sys/stat.h"
 #include "dirent.h"
-#include "imgui.h"
+#include "gtkmm.h"
 
 bool isDirectoryEmpty(const std::string& path) {
     DIR* dir = opendir(path.c_str());
@@ -67,14 +67,17 @@ int main(int argc, char *argv[]) {
         
 
     if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0){
-        std::cerr<<"no se pudo inicializar Sdl:"<<std::endl;
+        std::cerr<<"no se pudo inicializar Sdl:"<<SDL_GetError()<<std::endl;
         return -1;
     }
 
     if (not_videoGameCreated()) {
-        create_project _create_project;
+        // create_project _create_project;
         // auto app = Gtk::Application::create("org.gtkmm.examples.base");
         //  return app->make_window_and_run<create_project>(argc, argv);
+        auto app = Gtk::Application::create("org.fr_engine.base");
+        create_project _create_project;
+        return app->make_window_and_run<create_project>(argc,argv);         
     } else{
         Engine _engine;
         _engine.inicicalizate();
