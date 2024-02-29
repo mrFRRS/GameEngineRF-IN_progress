@@ -2,150 +2,88 @@
 #include <stdio.h>
 #include <iostream>
 #include <stdio.h>
-//sdl imports
-#include "SDL.h"
-#include "SDL_opengl.h"
-#include <SDL_opengles2.h>
-//imgui import and sld2 and opengl backends
-#include "imgui.h"
-#include "imgui_impl_sdl2.h"
-#include "imgui_impl_opengl3.h"
 //header import 
 #include "create_project.h"
-
-
+#include "filesystem"
+#include "fstream"
+#include "sys/stat.h"
+#include "dirent.h"
 //inicializate
 create_project::create_project()
+:
+vbox2(Gtk::Orientation::VERTICAL, 10),
+vbox1(Gtk::Orientation::VERTICAL, 10),
+vbox3_buttons(Gtk::Orientation::HORIZONTAL, 10),
+vbox4_create_button_label(Gtk::Orientation::HORIZONTAL,5),
+title_engine("FR engine"),
+project_name_engine("please write a proyect name engine"),
+create_project_button("create"),
+cancel_project_button("cancel")
 {  
-    //creating image and label widget
-    auto pmap = Gtk::make_managed<Gtk::Image>("assets/nier.jpg");
-    auto label = Gtk::make_managed<Gtk::Label>("this is a button");
-    label->set_expand(true);
 
+  set_child(vbox1);
+  //set name and default -size_of the window
+  set_title("Menu Engine");
+  set_default_size(600, 500);
+  //end
 
-    auto hbox = Gtk::make_managed<Gtk::Box>(Gtk::Orientation::HORIZONTAL, 10);
-    hbox->append(*label);
-    hbox->append(*pmap);
+  //halign bvox and title
+  vbox1.set_halign(Gtk::Align::END);
+  title_engine.set_halign(Gtk::Align::END);
+  title_engine.set_margin(20);
+  vbox1.append(title_engine);
 
-    m_button.set_child(*hbox);
-    m_button.signal_clicked().connect(sigc::mem_fun(*this, &create_project::on_button_clicked));
+  //halign project_name_engine, creating buttons and adding into vbox2
 
-    m_button.set_margin(20);
-    set_child(m_button);
-    set_title("menu engine");
-    set_default_size(600,600);
+  vbox2.set_halign(Gtk::Align::END);
+  //label text
+  project_name_engine.set_halign(Gtk::Align::END);
+  project_name_engine.set_margin_end(20);
+  //entry
+  get_project_name_engine.set_max_length(30);
+  get_project_name_engine.set_margin_end(20);
+  //adding label and entry into vbox2
+  vbox2.append(project_name_engine);
+  vbox2.append(get_project_name_engine);
+  //end
+  vbox3_buttons.append(cancel_project_button);
+  vbox3_buttons.append(create_project_button);
+  //end
+  create_project_button.set_size_request(100,50);
+  create_project_button.signal_clicked().connect(sigc::mem_fun(*this, &create_project::create_project_engine));
+  //button2: label and size
+  // cancel_project_button.set_child(vbox5_cancel_button_label);
+  cancel_project_button.set_size_request(100,50);
+  //end
+  // adding elements into containers
+  vbox1.append(vbox2);
+  vbox1.append(vbox3_buttons);
+  // vbox2.append(project_name_engine);
 }
+  //adding label in box
+  // vbox4_create_button_label.append(create_project_label_button);
+  // vbox5_cancel_button_label.append(cancel_project_label_button);
+  //button 1: label and size
+  // create_project_button.set_child(vbox4_create_button_label);
 
-void create_project::on_button_clicked()
-{
-  std::cout << "Hello World" << std::endl;
-}
+
 //destructor
 create_project::~create_project(){}
 
-// void create_project::create_project_window(){
-//  SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
-//         SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
-//         SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
-//         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
-//         //creating the sdl window 
-//         SDL_Window* window = SDL_CreateWindow("engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,600, 500, window_flags);
-//         //creating a opengl renderer 
-//         SDL_GLContext gl_context = SDL_GL_CreateContext(window);
-//         SDL_GL_MakeCurrent(window,gl_context);
-//         SDL_GL_GetSwapInterval();
-        
-//         // Setup Dear ImGui context
-//         IMGUI_CHECKVERSION();
-//         ImGui::CreateContext();
-//         ImGuiIO& io = ImGui::GetIO();
-
-//         //config flags
-//         io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-//         io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
-
-//          // Setup Dear ImGui style
-//          ImGui::StyleColorsDark();
-//         //ImGui::StyleColorsLight();
-
-//         //set up platafforms/ backends 
-//         ImGui_ImplSDL2_InitForOpenGL(window,gl_context);
-//         ImGui_ImplOpenGL3_Init();
-
-//     if(window == nullptr){
-//         std::cout<<"error al crear la ventana"<<std::endl;
-//         SDL_Quit();
-//     }
-
-//        // Main loop
-//     bool done = false;
-// #ifdef __EMSCRIPTEN__
-//     // For an Emscripten build we are disabling file-system access, so let's not attempt to do a fopen() of the imgui.ini file.
-//     // You may manually call LoadIniSettingsFromMemory() to load settings from your own storage.
-//     io.IniFilename = nullptr;
-//     EMSCRIPTEN_MAINLOOP_BEGIN
-// #else
-//     while (!done)
-// #endif
-//     {
-//         // Poll and handle events (inputs, window resize, etc.)
-//         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
-//         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application, or clear/overwrite your copy of the mouse data.
-//         // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application, or clear/overwrite your copy of the keyboard data.
-//         // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
-//         SDL_Event event;
-//         while (SDL_PollEvent(&event))
-//         {
-//             ImGui_ImplSDL2_ProcessEvent(&event);
-//             if (event.type == SDL_QUIT)
-//                 done = true;
-//             if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
-//                 done = true;
-//         }
-
-//         // Start the Dear ImGui frame
-//         ImGui_ImplOpenGL3_NewFrame();
-//         ImGui_ImplSDL2_NewFrame();
-//         ImGui::NewFrame();
-
-//         ImGui::Begin("hello", nullptr, ImGuiWindowFlags_None);
-//         ImGui::Text("hello");
-//         ImGui::End();
-
-//         // //deleteing instance element_list widget
-//         // _render_widget.~info_render_widget();
-//         // _header_widget.~header_engine_widget();
-//         // _widgets_created.~elemets_widget();
-//         // _folders_widget.~folders_lsit_widget();
-//         // _scene_view_widget.~scene_view();
-
-//         //display function
-//         ImGui::Render();
-//         glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
-//         glClearColor(0.0f,0.0f,0.0f,0.0f);
-//        // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-//         glClear(GL_COLOR_BUFFER_BIT);
-//         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-//         SDL_GL_SwapWindow(window);
-
-
-//     }
-// #ifdef __EMSCRIPTEN__
-//     EMSCRIPTEN_MAINLOOP_END;
-// #endif
-//     SDL_GL_DeleteContext(gl_context);
-//     ImGui_ImplOpenGL3_Shutdown();
-//     ImGui_ImplSDL2_Shutdown();
-//     ImGui::DestroyContext();
-
-// }
-
-// void create_project::shootdown(){
-//     SDL_DestroyWindow(window);
-//     SDL_Quit();
-// }
-// void create_project::on_create_project_clicked() {
-//     // Lógica para manejar el clic en el botón de crear proyecto aquí
-//     label_status.set_text("Proyecto creado!");
-// }
-
+void create_project::create_project_engine(){
+  struct stat info;  
+  std::string name_project = get_project_name_engine.get_text();
+  const char*  home_dir = getenv("HOME");
+  std::string target_directory = std::string(home_dir) + "/proyects_FR/" + std::string(name_project);
+  if(name_project.empty()){
+    std::cerr<<"error creating the project, the project is empty"<<std::endl;
+    return;
+  }
+ if (!std::filesystem::exists(target_directory)) {
+    if (std::filesystem::create_directory(target_directory)) {
+        std::cout << "Directory created successfully: " << target_directory << std::endl;
+    } else {
+        std::cerr << "Error creating directory" << std::endl;
+    }
+}
+}
