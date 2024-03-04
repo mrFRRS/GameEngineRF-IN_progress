@@ -12,6 +12,7 @@
 #include "dirent.h"
 #include "gtkmm.h"
 
+
 bool isDirectoryEmpty(const std::string& path) {
     DIR* dir = opendir(path.c_str());
     if (dir == nullptr) {
@@ -71,18 +72,22 @@ int main(int argc, char *argv[]) {
         return -1;
     }
 
+    //verifing if theres not directory created in homer/proyect_FR/
     if (not_videoGameCreated()) {
-        // create_project _create_project;
-        // auto app = Gtk::Application::create("org.gtkmm.examples.base");
-        //  return app->make_window_and_run<create_project>(argc, argv);
+        //creating the gtk window
         auto app = Gtk::Application::create("org.fr_engine.base");
         create_project _create_project;
-        return app->make_window_and_run<create_project>(argc,argv);         
-    } else{
-        Engine _engine;
-        _engine.inicicalizate();
-        _engine.shootdown();
+        return app->make_window_and_run<create_project>(argc, argv);
+    } else {
+        // //creating the gtkmm window
+        auto app = Gtk::Application::create("org.fr_engine.base");
+        create_project _create_project;
+        return app->make_window_and_run<create_project>(argc, argv);
+        // Engine _engine;
+        // _engine.inicicalizate();
+        // _engine.shootdown();
     }
+
         
     SDL_Quit();
     return 0;

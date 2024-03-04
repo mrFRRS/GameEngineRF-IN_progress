@@ -1,3 +1,4 @@
+#include "engine.h"
 #include <iostream>
 #include <stdio.h>
 #include <iostream>
@@ -8,67 +9,117 @@
 #include "fstream"
 #include "sys/stat.h"
 #include "dirent.h"
+#include "gtkmm.h"
+
+
+
 //inicializate
 create_project::create_project()
 :
-vbox2(Gtk::Orientation::VERTICAL, 10),
-vbox1(Gtk::Orientation::VERTICAL, 10),
-vbox3_buttons(Gtk::Orientation::HORIZONTAL, 10),
-vbox4_create_button_label(Gtk::Orientation::HORIZONTAL,5),
-title_engine("FR engine"),
-project_name_engine("please write a proyect name engine"),
+//box
+//main_box
+vbox1(Gtk::Orientation::VERTICAL,10),
+//page_one
+vbox2_main(Gtk::Orientation::HORIZONTAL,10),
+vbox2_UX(Gtk::Orientation::VERTICAL, 10),
+vbox2_buttons(Gtk::Orientation::HORIZONTAL, 10),
+vbox2_image(Gtk::Orientation::VERTICAL,10),
+//page_two
+vbox3(Gtk::Orientation::HORIZONTAL, 10),
+//page_three
+vbox4(Gtk::Orientation::VERTICAL),
+//labels
+title_engine_label("FR engine"),
+project_name_engine_label("please write a proyect name engine"),
+
+create_project_label("create project"),
+open_engine_label("open project"),
+delete_project_label("delete project"),
+//buttons
 create_project_button("create"),
-cancel_project_button("cancel")
-{  
+cancel_project_button("cancel"),
+button_tab_1("create"),
+button_tab_2("open"),
+button_tab_3("delete"),
+
+//images
+image("assets/images/nier.jpg")
+{ 
+  //initial settings 
+  set_title("menu");
+  set_default_size(600,450);
 
   set_child(vbox1);
-  //set name and default -size_of the window
-  set_title("Menu Engine");
-  set_default_size(600, 500);
-  //end
+  
+//notebook
+  vbox1.append(title_engine_label);
+  vbox1.append(notebook);
+  vbox1.set_hexpand(true);
+  vbox1.set_vexpand(true);
+  notebook.set_margin(10);
+  notebook.set_tab_pos(Gtk::PositionType::TOP);
+  notebook.append_page(vbox2_main, "create");
+  notebook.append_page(vbox3, "open");
+  notebook.append_page(vbox4, "delete");
 
-  //halign bvox and title
-  vbox1.set_halign(Gtk::Align::END);
-  title_engine.set_halign(Gtk::Align::END);
-  title_engine.set_margin(20);
-  vbox1.append(title_engine);
+  //vbox2_main
+  vbox2_main.set_hexpand(true);
+  vbox2_main.set_vexpand(true);
+  vbox2_main.set_halign(Gtk::Align::FILL);
+  vbox2_main.set_valign(Gtk::Align::FILL);
+  vbox2_main.append(vbox2_image);
+  vbox2_main.append(vbox2_UX);
 
-  //halign project_name_engine, creating buttons and adding into vbox2
+      
+      //setting vbox2_image
+  vbox2_image.append(image);
+  vbox2_image.set_hexpand(true);
+  vbox2_image.set_vexpand(true);
+  vbox2_image.set_halign(Gtk::Align::FILL);
+  vbox2_image.set_valign(Gtk::Align::FILL);
+  image.set_hexpand(true);
+  image.set_vexpand(true);
+  image.set_halign(Gtk::Align::FILL);
+  image.set_valign(Gtk::Align::FILL);
 
-  vbox2.set_halign(Gtk::Align::END);
-  //label text
-  project_name_engine.set_halign(Gtk::Align::END);
-  project_name_engine.set_margin_end(20);
-  //entry
-  get_project_name_engine.set_max_length(30);
-  get_project_name_engine.set_margin_end(20);
-  //adding label and entry into vbox2
-  vbox2.append(project_name_engine);
-  vbox2.append(get_project_name_engine);
-  //end
-  vbox3_buttons.append(cancel_project_button);
-  vbox3_buttons.append(create_project_button);
-  //end
+
+      //setting vbox2_UX
+  vbox2_UX.set_halign(Gtk::Align::END);
+  vbox2_UX.set_hexpand(false);
+     //append labels
+  vbox2_UX.append(create_project_label);
+  vbox2_UX.append(project_name_engine_label);
+      //append entry
+  vbox2_UX.append(get_project_name_engine);
+      //appends vbox and buttons
+  vbox2_UX.append(vbox2_buttons);
+
+      //labels
+  create_project_label.set_margin(10);
+  project_name_engine_label.set_margin(10);
+      
+      //entrys
+  get_project_name_engine.set_max_length(50);
+  get_project_name_engine.set_margin_end(10);
+      
+      //buttons
+  vbox2_buttons.set_halign(Gtk::Align::END);
+  vbox2_buttons.append(cancel_project_button);
+  vbox2_buttons.append(create_project_button);
   create_project_button.set_size_request(100,50);
-  create_project_button.signal_clicked().connect(sigc::mem_fun(*this, &create_project::create_project_engine));
-  //button2: label and size
-  // cancel_project_button.set_child(vbox5_cancel_button_label);
+  create_project_button.set_margin_end(10);
   cancel_project_button.set_size_request(100,50);
-  //end
-  // adding elements into containers
-  vbox1.append(vbox2);
-  vbox1.append(vbox3_buttons);
-  // vbox2.append(project_name_engine);
-}
-  //adding label in box
-  // vbox4_create_button_label.append(create_project_label_button);
-  // vbox5_cancel_button_label.append(cancel_project_label_button);
-  //button 1: label and size
-  // create_project_button.set_child(vbox4_create_button_label);
+  cancel_project_button.set_margin_end(10);
+      //butto handle
+  create_project_button.signal_clicked().connect(sigc::mem_fun(*this, &create_project::create_project_engine));
+  cancel_project_button.signal_clicked().connect(sigc::mem_fun(*this, &create_project::cancel));
 
+}
 
 //destructor
 create_project::~create_project(){}
+
+
 
 void create_project::create_project_engine(){
   struct stat info;  
@@ -82,8 +133,16 @@ void create_project::create_project_engine(){
  if (!std::filesystem::exists(target_directory)) {
     if (std::filesystem::create_directory(target_directory)) {
         std::cout << "Directory created successfully: " << target_directory << std::endl;
+        set_visible(false);
     } else {
-        std::cerr << "Error creating directory" << std::endl;
+        std::cerr << "Error creating the project" << std::endl;
     }
+
+  }else{
+      std::cout<<"project already exists"<<std::endl;
+  }
 }
+
+void create_project::cancel(){
+  set_visible(false);
 }

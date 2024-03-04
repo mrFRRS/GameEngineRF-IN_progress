@@ -8,7 +8,7 @@
 class Engine
 {
 private:
-    SDL_GLContext* gl_Contenxt;
+    SDL_GLContext gl_context;
     SDL_Window* window;
 public:
     Engine();
