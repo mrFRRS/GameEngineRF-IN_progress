@@ -5,19 +5,25 @@
     color: #ffffff;     
 }
 
+.text-title-page{
+    font-family: Arial, Helvetica, sans-serif;  /* Cambiar la fuente a Arial o a otra fuente sans-serif */
+    font-size: 20px;                    /* Tamaño de la fuente en píxeles */
+    font-weight: bold;                  /* Peso de la fuente, por ejemplo, "normal", "bold", etc. */
+    color: #d0d0d0;    
+}
+
 .text-label {
     font-family: "Arial, sans-serif";  /* Cambiar la fuente a Arial o a otra fuente sans-serif */
     font-size: 10px;                    /* Tamaño de la fuente en píxeles */
     font-weight: bold;                  /* Peso de la fuente, por ejemplo, "normal", "bold", etc. */
-    color: #ffffff;                     /* Color del texto */
+    color: #d0d0d0;                     /* Color del texto */
 }
 
 .button-style {
     background: #323133;
-    color: #ffffff;
+    color: #d0d0d0;
     border-radius: 5px;
-    border:1px #000000 solid;
-
+    border: #323133 solid;
     font-family: "Arial, sans-serif";  /* Cambiar la fuente a Arial o a otra fuente sans-serif */
     font-size: 10px;                   /* Tamaño de la fuente en píxeles */
     font-weight: bold;                 /* Peso de la fuente, por ejemplo, "normal", "bold", etc. */
@@ -25,8 +31,8 @@
 
 .my-entry {
     /* Estilos de fondo y borde */
-    background-color: #4e4e4e;
-    border: 1px solid #000000;
+    background-color: #323133;
+    border: 1px solid #323133;
 
     /* Ajustes de tamaño y espaciado interno */
     padding: 6px;
@@ -41,6 +47,13 @@
 }
 
 .my-window {
-    background-color: #1d1d1d; /* Color de fondo de la ventana */
+    background-color: #000000; /* Color de fondo de la ventana */
     /* Otros estilos según tus preferencias */
+}
+
+
+.vbox-main{
+    border: #323133;
+    background-color: #000000; /* Color de fondo de la ventana */
+    border-radius: 5px;
 }
