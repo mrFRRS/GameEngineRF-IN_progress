@@ -49,13 +49,21 @@ image("assets/images/nier.jpg")
   set_title("menu");
   set_default_size(600,450);
 
+
   set_child(vbox1);
-  
+
+  std::string cssFilePath = "src/gtk/style/style1.css";
+  Glib::RefPtr<Gtk::CssProvider> provider = Gtk::CssProvider::create();
+  provider->load_from_path(cssFilePath);
+
 //notebook
   vbox1.append(title_engine_label);
   vbox1.append(notebook);
   vbox1.set_hexpand(true);
   vbox1.set_vexpand(true);
+  vbox1.get_style_context()->add_provider(provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  vbox1.get_style_context()->add_class("my-window");
+
   notebook.set_margin(10);
   notebook.set_tab_pos(Gtk::PositionType::TOP);
   notebook.append_page(vbox2_main, "create");
@@ -77,10 +85,13 @@ image("assets/images/nier.jpg")
   vbox2_image.set_vexpand(true);
   vbox2_image.set_halign(Gtk::Align::FILL);
   vbox2_image.set_valign(Gtk::Align::FILL);
+
   image.set_hexpand(true);
   image.set_vexpand(true);
   image.set_halign(Gtk::Align::FILL);
   image.set_valign(Gtk::Align::FILL);
+  image.get_style_context()->add_provider(provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  image.get_style_context()->add_class("image-container");
 
 
       //setting vbox2_UX
@@ -96,20 +107,37 @@ image("assets/images/nier.jpg")
 
       //labels
   create_project_label.set_margin(10);
+
   project_name_engine_label.set_margin(10);
+
+  project_name_engine_label.get_style_context()->add_provider(provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  project_name_engine_label.get_style_context()->add_class("text-label");
+
+  title_engine_label.get_style_context()->add_provider(provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  title_engine_label.get_style_context()->add_class("text-title");
       
       //entrys
   get_project_name_engine.set_max_length(50);
   get_project_name_engine.set_margin_end(10);
+  get_project_name_engine.get_style_context()->add_provider(provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  get_project_name_engine.get_style_context()->add_class("my-entry");
+  
       
       //buttons
   vbox2_buttons.set_halign(Gtk::Align::END);
   vbox2_buttons.append(cancel_project_button);
   vbox2_buttons.append(create_project_button);
+  
   create_project_button.set_size_request(100,50);
   create_project_button.set_margin_end(10);
+  create_project_button.get_style_context()->add_provider(provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  create_project_button.get_style_context()->add_class("button-style");
+
   cancel_project_button.set_size_request(100,50);
   cancel_project_button.set_margin_end(10);
+  cancel_project_button.get_style_context()->add_provider(provider, GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+   cancel_project_button.get_style_context()->add_class("button-style");
+
       //butto handle
   create_project_button.signal_clicked().connect(sigc::mem_fun(*this, &create_project::create_project_engine));
   cancel_project_button.signal_clicked().connect(sigc::mem_fun(*this, &create_project::cancel));

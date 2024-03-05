@@ -1,0 +1,46 @@
+.text-title{
+    font-family: "Arial, sans-serif";  /* Cambiar la fuente a Arial o a otra fuente sans-serif */
+    font-size: 15px;                    /* Tamaño de la fuente en píxeles */
+    font-weight: bold;                  /* Peso de la fuente, por ejemplo, "normal", "bold", etc. */
+    color: #ffffff;     
+}
+
+.text-label {
+    font-family: "Arial, sans-serif";  /* Cambiar la fuente a Arial o a otra fuente sans-serif */
+    font-size: 10px;                    /* Tamaño de la fuente en píxeles */
+    font-weight: bold;                  /* Peso de la fuente, por ejemplo, "normal", "bold", etc. */
+    color: #ffffff;                     /* Color del texto */
+}
+
+.button-style {
+    background: #323133;
+    color: #ffffff;
+    border-radius: 5px;
+    border:1px #000000 solid;
+
+    font-family: "Arial, sans-serif";  /* Cambiar la fuente a Arial o a otra fuente sans-serif */
+    font-size: 10px;                   /* Tamaño de la fuente en píxeles */
+    font-weight: bold;                 /* Peso de la fuente, por ejemplo, "normal", "bold", etc. */
+}
+
+.my-entry {
+    /* Estilos de fondo y borde */
+    background-color: #4e4e4e;
+    border: 1px solid #000000;
+
+    /* Ajustes de tamaño y espaciado interno */
+    padding: 6px;
+    min-width: 100px; /* Puedes ajustar el ancho mínimo según sea necesario */
+
+    /* Otros estilos según tus preferencias */
+}
+
+/* Cambiar el color del texto cuando el foco está activo */
+.my-entry:focus {
+    color: #333333; /* Puedes ajustar el color según tus preferencias */
+}
+
+.my-window {
+    background-color: #1d1d1d; /* Color de fondo de la ventana */
+    /* Otros estilos según tus preferencias */
+}
