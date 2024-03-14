@@ -3,13 +3,13 @@
 // Engine.h
 
 #ifndef ENGINE_H
+#define ENGINE_H
 #include <SDL.h>
 #include "SDL_opengl.h"
 class Engine
 {
 private:
-    SDL_GLContext gl_context;
-    SDL_Window* window;
+
 public:
     Engine();
     ~Engine();

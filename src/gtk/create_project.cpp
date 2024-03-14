@@ -10,7 +10,7 @@
 #include "sys/stat.h"
 #include "dirent.h"
 #include "gtkmm.h"
-
+#include <unistd.h>
 
 
 //inicializate
@@ -149,7 +149,22 @@ void create_project::create_project_engine(){
  if (!std::filesystem::exists(target_directory)) {
     if (std::filesystem::create_directory(target_directory)) {
         std::cout << "Directory created successfully: " << target_directory << std::endl;
-        set_visible(false);
+        if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0){
+        std::cerr<<"no se pudo inicializar Sdl:"<<SDL_GetError()<<std::endl;
+      }
+        pid_t pid = fork();
+        
+        if(pid == 0 ){
+
+        Engine _engine;
+        _engine.inicicalizate();
+        _engine.shootdown();
+
+        }
+
+       set_visible(false);
+
+    // Resto de la inicialización de SDL
     } else {
         std::cerr << "Error creating the project" << std::endl;
     }

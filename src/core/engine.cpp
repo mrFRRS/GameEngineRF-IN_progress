@@ -22,7 +22,7 @@ folders_lsit_widget _folders_widget;
 info_render_widget _render_widget;
 scene_view _scene_view_widget;
 //constructor 
-Engine::Engine(): window(nullptr), gl_context(nullptr){} 
+Engine::Engine(){}//: window(nullptr), gl_context(nullptr){} 
 
 //destructor
 Engine::~Engine(){
@@ -36,9 +36,9 @@ void Engine::inicicalizate(){
         SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
         SDL_WindowFlags window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
         //creating the sdl window 
-        window = SDL_CreateWindow("engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1100, 800, window_flags);
+        SDL_Window* window = SDL_CreateWindow("engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1100, 800, window_flags);
         //creating a opengl renderer 
-        gl_context = SDL_GL_CreateContext(window);
+        SDL_GLContext gl_context = SDL_GL_CreateContext(window);
         SDL_GL_MakeCurrent(window,gl_context);
         SDL_GL_GetSwapInterval();
         
@@ -127,12 +127,11 @@ void Engine::inicicalizate(){
     ImGui_ImplOpenGL3_Shutdown();
     ImGui_ImplSDL2_Shutdown();
     ImGui::DestroyContext();
-}
-
-
-
-void Engine::shootdown(){
+    SDL_Quit();
     SDL_GL_DeleteContext(gl_context);
     SDL_DestroyWindow(window);
-    SDL_Quit();
 }
+
+
+
+void Engine::shootdown(){}

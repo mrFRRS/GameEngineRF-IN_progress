@@ -79,13 +79,9 @@ int main(int argc, char *argv[]) {
         create_project _create_project;
         return app->make_window_and_run<create_project>(argc, argv);
     } else {
-        // //creating the gtkmm window
         auto app = Gtk::Application::create("org.fr_engine.base");
         create_project _create_project;
         return app->make_window_and_run<create_project>(argc, argv);
-        // Engine _engine;
-        // _engine.inicicalizate();
-        // _engine.shootdown();
     }
 
         
