@@ -8,19 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mrsws/dev/c/projects/motor_grafico/imgui/imgui.cpp" "CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/imgui/imgui.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_draw.cpp" "CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/imgui/imgui_draw.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_opengl3.cpp" "CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/imgui/imgui_impl_opengl3.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_impl_sdl2.cpp" "CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/imgui/imgui_impl_sdl2.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_tables.cpp" "CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/imgui/imgui_tables.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/imgui/imgui_widgets.cpp" "CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/imgui/imgui_widgets.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/core/engine.cpp" "CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/core/engine.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/main.cpp" "CMakeFiles/motor_grafico.dir/src/main.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/main.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/widget/elements_list_widget/elements_list_widget.cpp" "CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/widget/elements_list_widget/elements_list_widget.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/widget/folders_list_widget/folders_list_widget.cpp" "CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/widget/folders_list_widget/folders_list_widget.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/widget/header_engine_widget/header_engine_widget.cpp" "CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/widget/header_engine_widget/header_engine_widget.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/widget/info_render_widget/info_render_widget.cpp" "CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/widget/info_render_widget/info_render_widget.cpp.o.d"
-  "/home/mrsws/dev/c/projects/motor_grafico/src/widget/scene_view_widget/scene_view_widget.cpp" "CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/widget/scene_view_widget/scene_view_widget.cpp.o.d"
+  "/home/mrsws/code/GameEngineRF-IN_progress/src/editor/ui/principal_page/principal_page.cpp" "CMakeFiles/motor_grafico.dir/src/editor/ui/principal_page/principal_page.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/editor/ui/principal_page/principal_page.cpp.o.d"
+  "/home/mrsws/code/GameEngineRF-IN_progress/src/editor/ui/project_page/create_project.cpp" "CMakeFiles/motor_grafico.dir/src/editor/ui/project_page/create_project.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/editor/ui/project_page/create_project.cpp.o.d"
+  "/home/mrsws/code/GameEngineRF-IN_progress/src/main.cpp" "CMakeFiles/motor_grafico.dir/src/main.cpp.o" "gcc" "CMakeFiles/motor_grafico.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

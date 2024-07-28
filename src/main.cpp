@@ -1,12 +1,11 @@
-//paths
-#include "gtk/create_project.h"
-#include "core/engine.h"
+//create project header
+#include "editor/ui/project_page/create_project.h"
 //sdl including
 #include <SDL2/SDL.h>
 //file handle
 #include <iostream>
-#include "filesystem"
-#include "fstream"
+//#include "filesystem"
+#//include "fstream"
 #include <cstdlib>
 #include "sys/stat.h"
 #include "dirent.h"
@@ -66,25 +65,25 @@ bool not_videoGameCreated(){
 
 int main(int argc, char *argv[]) {
         
+    
+    // if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0){
+    //     std::cerr<<"no se pudo inicializar Sdl:"<<SDL_GetError()<<std::endl;
+    //     return -1;
+    // }
 
-    if(SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER) != 0){
-        std::cerr<<"no se pudo inicializar Sdl:"<<SDL_GetError()<<std::endl;
-        return -1;
-    }
-
-    //verifing if theres not directory created in homer/proyect_FR/
+    // //verifing if theres not directory created in homer/proyect_FR/
     if (not_videoGameCreated()) {
         //creating the gtk window
         auto app = Gtk::Application::create("org.fr_engine.base");
-        create_project _create_project;
+        // create_project _create_project;
         return app->make_window_and_run<create_project>(argc, argv);
     } else {
         auto app = Gtk::Application::create("org.fr_engine.base");
-        create_project _create_project;
+        // create_project _create_project;
         return app->make_window_and_run<create_project>(argc, argv);
     }
 
         
-    SDL_Quit();
-    return 0;
+    // SDL_Quit();
+    // return 0;
 }
