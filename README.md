@@ -1,2 +1,3 @@
-hello everyone, this is a simple game engine, in-progress, its using imGui, sdl2 and opengl3 
+hello everyone, this is a simple game engine, in-progress, its using gtkmm 4.0 and opengl
+
 
