@@ -1,4 +1,3 @@
-
 #include "create_project.h"  
 #include "editor/ui/principal_page/principal_page.h"
 #include "gtkmm.h"
@@ -166,9 +165,14 @@ void create_project::row_select(const Gtk::TreeModel::Path& path, Gtk::TreeViewC
 
 
     std::cout << "Nombre del proyecto: " << project_name_str << std::endl;
-    auto new_page = new principal_page(project_name_str);
+
+    auto app = Gtk::Application::create("org.gtkmm.example");
+
+
+    // Crear una nueva página de proyecto y mostrarla
+    auto new_page = Gtk::make_managed<principal_page>(app, project_name_str);
+    app->add_window(*new_page);
     new_page->show();
-   
 }
 
 void create_project::on_child_hide(std::shared_ptr<Gtk::Window> window){
