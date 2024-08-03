@@ -3,30 +3,44 @@
 #include <iostream>
 
 principal_page::principal_page(const Glib::RefPtr<Gtk::Application>& app, const std::string& project_name)
-: main_box(Gtk::Orientation::VERTICAL),
-  label("Project: " + project_name)
+: main_box(Gtk::Orientation::VERTICAL)
 {
-    // Basic settings for the page
-    set_title("Project Page");
+    //                                                                                      //
+    // ++++++++++++++++++++++++++ Basic settings for the page +++++++++++++++++++++++++++++ //
+    //                                                                                      //
+    
+    set_title("Project " + project_name);
     set_default_size(800, 900);
     set_child(main_box);
-    
-    main_box.append(label);
+
+    //                                                                             //
+    // ++++++++++++++============ action group actions ++++++++++++++++++++++===== //
+    //                                                                             //
 
     m_ref_action_group = Gio::SimpleActionGroup::create();
 
+
+    //                                                                           //
+    // +++++++++++++++++++++++++ fisrt submenu File ++++++++++++++++++++++++++++ //
+    //                                                                           ??
     m_ref_action_group->add_action("new",
-        [] { std::cout << "A File|New menu item was selected.\n"; /* on_action_file_new() */}); 
+        // [] { std::cout << "A File|New menu item was selected.\n"; /* on_action_file_new() */}); 
+    sigc::mem_fun(*this, &principal_page::on_action_others));
 
     m_ref_action_group->add_action("open",
         sigc::mem_fun(*this, &principal_page::on_action_others));
 
-    m_ref_action_rain = m_ref_action_group->add_action_bool("rain",
-        [this] { on_action_toggle(); }, false);
-
+    // m_ref_action_rain = m_ref_action_group->add_action_bool("rain",
+    //     [this] { on_action_toggle(); }, false);
     m_ref_action_group->add_action("quit",
         sigc::mem_fun(*this, &principal_page::on_action_file_quit));
 
+    
+    
+    //                                                                             //
+    // +++++++++++++++++++++++++ second submenu Edit +++++++++++++++++++++++++++++ //
+    //                                                                             //
+    
     // With a lambda expression and sigc::track_obj() or sigc::track_object().
     // Disconnects automatically like sigc::mem_fun().
 #if SIGCXX_MINOR_VERSION >= 4
@@ -41,12 +55,21 @@ principal_page::principal_page(const Glib::RefPtr<Gtk::Application>& app, const 
     m_ref_action_group->add_action("paste",
         sigc::mem_fun(*this, &principal_page::on_action_others));
 
-    insert_action_group("example", m_ref_action_group);
 
+    //                                                                       //
+    // +++++++++++++++++++++ insert action group +++++++++++++++++++++++++++ //
+    //                                                                       //
+
+    
+    insert_action_group("example", m_ref_action_group);
     // Define how the actions are presented in the menus and toolbars:
     m_ref_builder = Gtk::Builder::create();
-
-    // Layout the actions in a menubar and toolbar:
+    
+    
+    //                                                                                                        //
+    // +++++++++++++++++++++++ Layout the actions in a menubar and toolbar ++++++++++++++++++++++++++++++++++ //
+    //                                                                                                        //
+    
     const Glib::ustring ui_info =
         "<interface>"
         "  <menu id='menubar'>"
@@ -90,6 +113,21 @@ principal_page::principal_page(const Glib::RefPtr<Gtk::Application>& app, const 
         "        <attribute name='action'>example.paste</attribute>"
         "      </item>"
         "    </submenu>"
+        "    <submenu>"
+        "      <attribute name='label' translatable='yes'>_Assets</attribute>"
+        "    </submenu>"
+        "    <submenu>"
+                "<attribute name='label' translatable='yes'>_GameObject</attribute>"
+        "    </submenu>"
+        "    <submenu>"
+        "      <attribute name='label' translatable='yes'>_component</attribute>"
+        "    </submenu>"
+        "    <submenu>"
+        "      <attribute name='label' translatable='yes'>_Window</attribute>"
+        "    </submenu>"
+        "    <submenu>"
+        "      <attribute name='label' translatable='yes'>_Help</attribute>"
+        "    </submenu>"
         "  </menu>"
         "</interface>";
 
@@ -131,7 +169,16 @@ principal_page::principal_page(const Glib::RefPtr<Gtk::Application>& app, const 
         main_box.append(*toolbar);
 }
 
+//                                                      //
+// +++++++++++++++++= destructor ++++++++++++++++++++++ //
+//                                                      //
+
 principal_page::~principal_page() {}
+
+
+//                                                            //
+// ++++++++++++==toolbar functions ++++++++++++++++++++++++++ //
+//                                                            //
 
 void principal_page::on_action_file_quit()
 {
@@ -143,22 +190,22 @@ void principal_page::on_action_others()
     std::cout << "A menu item was selected." << std::endl;
 }
 
-void principal_page::on_action_toggle()
-{
-    std::cout << "The toggle menu item was selected." << std::endl;
+// void principal_page::on_action_toggle()
+// {
+//     std::cout << "The toggle menu item was selected." << std::endl;
 
-    bool active = false;
-    m_ref_action_rain->get_state(active);
+//     bool active = false;
+//     m_ref_action_rain->get_state(active);
 
-    // The toggle action's state does not change automatically:
-    active = !active;
-    m_ref_action_rain->change_state(active);
+//     // The toggle action's state does not change automatically:
+//     active = !active;
+//     m_ref_action_rain->change_state(active);
 
-    Glib::ustring message;
-    if(active)
-        message = "Toggle is active.";
-    else
-        message = "Toggle is not active";
+//     Glib::ustring message;
+//     if(active)
+//         message = "Toggle is active.";
+//     else
+//         message = "Toggle is not active";
 
-    std::cout << message << std::endl;
-}
+//     std::cout << message << std::endl;
+// }

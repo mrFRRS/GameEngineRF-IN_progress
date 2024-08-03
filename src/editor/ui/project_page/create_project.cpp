@@ -168,11 +168,15 @@ void create_project::row_select(const Gtk::TreeModel::Path& path, Gtk::TreeViewC
 
     auto app = Gtk::Application::create("org.gtkmm.example");
 
-
+    
     // Crear una nueva página de proyecto y mostrarla
     auto new_page = Gtk::make_managed<principal_page>(app, project_name_str);
     app->add_window(*new_page);
     new_page->show();
+    
+
+
+
 }
 
 void create_project::on_child_hide(std::shared_ptr<Gtk::Window> window){

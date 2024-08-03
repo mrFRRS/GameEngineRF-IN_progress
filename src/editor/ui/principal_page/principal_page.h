@@ -10,7 +10,7 @@ protected:
     // Signal handlers for toolbar
     void on_action_file_quit();
     void on_action_others();
-    void on_action_toggle();
+    // void on_action_toggle();
     
     // Window widgets
     Gtk::Box main_box;
